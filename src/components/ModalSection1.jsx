@@ -21,7 +21,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.7rem 1.5rem;
 `;
 
 function ModalSection1() {
@@ -51,6 +51,7 @@ function ModalSection1() {
         <Li>Shop</Li>
         <Li>About the club</Li>
         <Li>Fans</Li>
+        <Li>Contact Us</Li>
         <Li>Contact Us</Li>
       </Ul>
     </Section1>

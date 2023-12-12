@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
-import ModalContainer from '../components/ModalContainer';
+import Advert from '../components/Advert';
+// import ModalContainer from '../components/ModalContainer';
 
 const StyledIndexPage = styled.div`
   display: flex;
@@ -11,12 +12,15 @@ const StyledIndexPage = styled.div`
 
 function IndexPage() {
   return (
-    <StyledIndexPage>
-      {/* <Nav />
-      <HeroSection /> */}
+    <>
+      <StyledIndexPage>
+        <Nav />
+        <HeroSection />
 
-      <ModalContainer />
-    </StyledIndexPage>
+        {/* <ModalContainer /> */}
+      </StyledIndexPage>
+      <Advert />
+    </>
   );
 }
 
