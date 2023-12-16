@@ -3,6 +3,7 @@ import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
 import Latest from '../components/Latest';
+
 // import ModalContainer from '../components/ModalContainer';
 
 const StyledIndexPage = styled.div`
@@ -20,6 +21,7 @@ function IndexPage() {
 
         {/* <ModalContainer /> */}
       </StyledIndexPage>
+
       <Advert />
       <Latest />
     </>
