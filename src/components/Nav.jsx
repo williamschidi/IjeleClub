@@ -3,19 +3,23 @@ import styled from 'styled-components';
 import CollapseNav from './CollapseNav';
 import MyLogo from './MyLogo';
 import Search from './Search';
+import NavCenter from './NavCenter';
 
 const NavStyled = styled.div`
   height: var(--navigation-height, 20%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 0;
+  gap: 3rem;
 `;
 
 const RightSide = styled.ul`
   list-style: none;
   display: flex;
-  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
 `;
 
 function Nav() {
@@ -24,6 +28,7 @@ function Nav() {
       <div>
         <MyLogo />
       </div>
+      <NavCenter />
       <RightSide>
         <Search />
         <CollapseNav />

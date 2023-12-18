@@ -5,20 +5,16 @@ import {
   HiChevronRight,
   HiMiniPlay,
 } from 'react-icons/hi2';
-
-const LatestContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-  width: 120rem;
-  margin: 8rem auto;
-`;
+import { useRef } from 'react';
 
 const Ul = styled.ul`
+  max-width: 120rem;
+  margin: 8rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  margin: 6rem;
 `;
 
 const Li = styled.li`
@@ -39,16 +35,23 @@ const Span = styled.span`
   justify-content: center;
   align-items: center;
 `;
+
 const VideosContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 5rem;
+  margin: 8rem;
+  min-width: 0;
+  overflow-x: scroll;
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out;
 `;
 
 const VideoContent = styled.div`
-  width: 38rem;
+  min-width: 38rem;
   height: 55rem;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
 `;
@@ -104,22 +107,37 @@ const FooterSpan = styled.span`
 `;
 
 function Latest() {
+
+  const scrollContainerRef = useRef(null);
+
+  function scrollLeft() {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft -= 400;
+    }
+  }
+
+  function scrollRight() {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft += 400;
+    }
+  }
+
   return (
-    <LatestContainer>
+    <>
       <Ul>
         <Li>
           <span>Latest Video</span> <HiArrowRight size={30} color="#1864ab" />
         </Li>
         <Li>
-          <Span>
+          <Span onClick={scrollLeft}>
             <HiChevronLeft color="#fff" size={30} />
           </Span>
-          <Span>
+          <Span onClick={scrollRight}>
             <HiChevronRight color="#fff" size={30} />
           </Span>
         </Li>
       </Ul>
-      <VideosContainer>
+      <VideosContainer ref={scrollContainerRef}>
         <VideoContent>
           <ImgContainer>
             <Img src="image6.jpg" alt="latest video" />
@@ -162,7 +180,7 @@ function Latest() {
           </LatestFooter>
         </VideoContent>
 
-        {/* <VideoContent>
+        <VideoContent>
           <ImgContainer>
             <Img src="image6.jpg" alt="latest video" />
             <PlayBtnContainer>
@@ -174,9 +192,22 @@ function Latest() {
             <FooterSpan type="text">Video</FooterSpan>
             <FooterSpan type="date">11 Dec 23</FooterSpan>
           </LatestFooter>
-        </VideoContent> */}
+        </VideoContent>
+        <VideoContent>
+          <ImgContainer>
+            <Img src="image6.jpg" alt="latest video" />
+            <PlayBtnContainer>
+              <HiMiniPlay size={30} color="#fff" />
+            </PlayBtnContainer>
+          </ImgContainer>
+          <H2>Highlights: Arsenal 4-1 Chelsea </H2>
+          <LatestFooter>
+            <FooterSpan type="text">Video</FooterSpan>
+            <FooterSpan type="date">11 Dec 23</FooterSpan>
+          </LatestFooter>
+        </VideoContent>
       </VideosContainer>
-    </LatestContainer>
+    </>
   );
 }
 

@@ -4,8 +4,6 @@ import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
 import Latest from '../components/Latest';
 
-// import ModalContainer from '../components/ModalContainer';
-
 const StyledIndexPage = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,8 +16,6 @@ function IndexPage() {
       <StyledIndexPage>
         <Nav />
         <HeroSection />
-
-        {/* <ModalContainer /> */}
       </StyledIndexPage>
 
       <Advert />

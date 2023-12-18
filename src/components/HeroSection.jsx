@@ -8,15 +8,24 @@ const BackgroundContainer = styled.div`
   justify-content: center;
   max-width: 100%;
   height: 100%;
-  z-index: -5;
-  background: #ccc;
+  /* z-index: -5; */
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: -1;
 `;
 
 const BackgroundImage = styled.img`
   position: absolute;
-  width: 40%;
+  width: 100%;
   height: 100%;
   opacity: 0;
+  object-fit: cover;
   transition: opacity 2s ease-in-out;
   ${(props) =>
     props.type === 'current' &&
@@ -28,10 +37,12 @@ const BackgroundImage = styled.img`
 `;
 
 const images = [
-  { src: 'image1.jpg', alt: 'image1' },
-  { src: 'image2.jpg', alt: 'image2' },
-  { src: 'image3.jpg', alt: 'image3' },
-  { src: 'image4.jpg', alt: 'image4' },
+  { src: 'pic1.jpg', alt: 'pic1' },
+
+  { src: 'pic5.jpg', alt: 'pic5' },
+  { src: 'pic6.jpg', alt: 'pic6' },
+  { src: 'pic7.jpg', alt: 'pic7' },
+  { src: 'pic8.jpg', alt: 'pic8' },
 ];
 
 function HeroSection() {
@@ -47,14 +58,16 @@ function HeroSection() {
 
   return (
     <BackgroundContainer>
-      {images.map((img, ind) => (
-        <BackgroundImage
-          key={ind}
-          src={img.src}
-          alt={img.alt}
-          type={ind === imageInd ? 'current' : ''}
-        />
-      ))}
+      <Overlay>
+        {images.map((img, ind) => (
+          <BackgroundImage
+            key={ind}
+            src={img.src}
+            alt={img.alt}
+            type={ind === imageInd ? 'current' : ''}
+          />
+        ))}
+      </Overlay>
     </BackgroundContainer>
   );
 }

@@ -24,7 +24,7 @@ const Li = styled.li`
   font-size: 2.5rem;
   font-weight: bold;
 
-  /* background: blue; */
+ 
 `;
 
 function ModalSection2() {

@@ -52,7 +52,6 @@ function ModalSection1() {
         <Li>About the club</Li>
         <Li>Fans</Li>
         <Li>Contact Us</Li>
-        <Li>Contact Us</Li>
       </Ul>
     </Section1>
   );

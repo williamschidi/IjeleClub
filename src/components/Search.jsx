@@ -1,5 +1,6 @@
 // import React from 'react';
 import { HiMagnifyingGlass } from 'react-icons/hi2';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SearchButton = styled.li`
@@ -14,7 +15,9 @@ const SearchButton = styled.li`
 function Search() {
   return (
     <SearchButton>
-      <HiMagnifyingGlass size={30} color="grey" />
+      <NavLink to="search">
+        <HiMagnifyingGlass size={25} color="grey" />
+      </NavLink>
     </SearchButton>
   );
 }

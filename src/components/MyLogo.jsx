@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 const LogoContainer = styled.div`
-  width: 8rem;
-  height: 8rem;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+
+  /* padding: 2rem 4rem; */
 `;
 
 const MyImage = styled.img`
-  width: 100%;
+  width: 90%;
 `;
 
 function MyLogo() {
