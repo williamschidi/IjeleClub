@@ -12,8 +12,14 @@ const Li = styled.li`
   color: blue;
   font-size: 1.8rem;
   font-weight: bold;
-  padding: 4rem 2.5rem;
+  padding: 5rem 2.5rem;
   text-transform: uppercase;
+  border-bottom: 4px solid transparent;
+
+  transition: opacity 0.3s ease-in-out, border-botton 0.3s ease-in-out;
+  &:hover {
+    border-bottom: 4px solid red;
+  }
 `;
 
 const Nav = styled(NavLink)`
