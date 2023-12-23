@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import IndexPage from './pages/IndexPage';
 import GlobalStyles from './styles/GlobalStyles';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Latest from './components/Latest';
+import Latest from './pages/Latest';
 import MenPage from './pages/MenPage';
 import WomenPage from './pages/WomenPage';
 import HospitalityPage from './pages/HospitalityPage';

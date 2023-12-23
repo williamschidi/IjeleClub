@@ -1,5 +1,5 @@
 function Latest() {
-  return <div>Latest Page</div>;
+  return <div>latest</div>;
 }
 
 export default Latest;
