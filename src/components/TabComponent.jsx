@@ -10,9 +10,9 @@ const TabContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   gap: 6rem;
-  height: 70vh;
+  height: 60vh;
 `;
 
 const TabContent = styled.div`
