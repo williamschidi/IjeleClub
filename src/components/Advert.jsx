@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { HiArrowLeft, HiOutlineInformationCircle } from 'react-icons/hi2';
 
 const AdvertSection = styled.div`
+  position: relative;
   max-width: 110rem;
   padding: 1rem 0;
   background: #f8f9fa;
@@ -35,8 +36,8 @@ const ButtonPrimary = styled.button`
       justify-content: center;
       gap: 0.8rem;
     `}
-  font-size: 2.5rem;
-  padding: 1.2rem;
+  font-size: 1.6rem;
+  padding: 1rem;
   border: none;
   border-radius: 0.5rem;
   /* box-shadow: 0 3px 4px #ccc; */
@@ -46,7 +47,7 @@ const ButtonPrimary = styled.button`
 
 const H1 = styled.h1`
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   color: #9e9ea6;
   font-family: 'Arial', sans-serif;
 `;
@@ -55,17 +56,25 @@ const Span = styled.span`
   font-weight: bold;
 `;
 
+const SpanArrow = styled.span`
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+`;
+
 function Advert() {
   return (
     <AdvertSection>
-      <HiArrowLeft size={20} color="#868e96" fontWeight="bold" />
+      <SpanArrow>
+        <HiArrowLeft size={15} color="#868e96" fontWeight="bold" />
+      </SpanArrow>
       <H1>
         Ads by <Span>Google</Span>
       </H1>
       <ButtonContainer>
         <ButtonPrimary type="primary">Stop Seeing this ad</ButtonPrimary>
         <ButtonPrimary type="secondary">
-          <span> Why this ad?</span> <HiOutlineInformationCircle size={25} />
+          <span> Why this ad?</span> <HiOutlineInformationCircle size={20} />
         </ButtonPrimary>
       </ButtonContainer>
     </AdvertSection>

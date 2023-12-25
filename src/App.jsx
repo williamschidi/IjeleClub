@@ -9,6 +9,7 @@ import HospitalityPage from './pages/HospitalityPage';
 import ShopPage from './pages/ShopPage';
 import Watch from './pages/Watch';
 import SearchPage from './pages/SearchPage';
+import MatchDetailsPage from './pages/MatchDetailsPage';
 
 const Container = styled.div`
   margin: 0;
@@ -30,6 +31,7 @@ function App() {
           <Route path="shop" element={<ShopPage />} />
           <Route path="watch" element={<Watch />} />
           <Route path="search" element={<SearchPage />} />
+          <Route path="matchDetails" element={<MatchDetailsPage />} />
         </Routes>
       </BrowserRouter>
     </Container>

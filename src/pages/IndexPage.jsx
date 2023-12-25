@@ -3,6 +3,7 @@ import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
 import MyNewLatest from '../components/MyNewLatest';
+import TabComponent from '../components/TabComponent';
 
 const StyledIndexPage = styled.div`
   display: flex;
@@ -19,8 +20,9 @@ function IndexPage() {
       </StyledIndexPage>
 
       <Advert />
-
       <MyNewLatest />
+      <Advert />
+      <TabComponent />
     </>
   );
 }
