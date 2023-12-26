@@ -13,7 +13,7 @@ const NavButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: blue;
+  background: #001489;
 `;
 const H4 = styled.div`
   font-weight: bold;

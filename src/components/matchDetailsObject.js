@@ -1,5 +1,4 @@
 function inputDateFormat(date) {
-  // const date = '27/12/2023';
   const [day, month, year] = date.split('/');
   const formattedDate = `${month}/${day}/${year}`;
   const matchDate = new Date(formattedDate);

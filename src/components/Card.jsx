@@ -1,0 +1,102 @@
+import styled, { css } from 'styled-components';
+
+const SliderContainer = styled.div`
+  display: flex;
+  gap: 2rem;
+  max-width: 120rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+`;
+
+const Cards = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 37rem;
+  height: 45rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translateX(0); */
+
+  ${(props) =>
+    props.curSlide !== undefined &&
+    props.ind !== undefined &&
+    css`
+      transform: translateX(${105 * (props.ind - props.curSlide)}%);
+    `}
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: 20rem;
+  transition: transform 0.7s ease-in-out;
+  /* overflow: hidden; */
+  ${Cards}:hover & {
+    transform: scale(1.05);
+  }
+`;
+
+const Div = styled.div`
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  padding: 3rem 3rem 6rem;
+  height: 10rem;
+  width: 100%;
+`;
+
+const H2 = styled.h2`
+  font-size: 2rem;
+  color: inherit;
+`;
+
+const LatestFooter = styled.div`
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding-top: 2rem;
+`;
+
+const FooterSpan = styled.span`
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  ${(props) =>
+    props.type === 'text' &&
+    css`
+      color: inherit;
+      letter-spacing: 1.3px;
+    `}
+`;
+
+function Card({ images, curSlide, cardRef, subheading, type, date }) {
+  return (
+    <SliderContainer ref={cardRef} className="cardContainer">
+      {images.map((img, ind) => (
+        <Cards key={img} curSlide={curSlide} ind={ind}>
+          <Img src={img} alt={img} />
+          <Div>
+            <H2>{subheading.at(ind)}</H2>
+
+            <LatestFooter>
+              <FooterSpan type="text">{type.at(ind)}</FooterSpan>
+
+              <FooterSpan type="date">{date.at(ind)}</FooterSpan>
+            </LatestFooter>
+          </Div>
+        </Cards>
+      ))}
+    </SliderContainer>
+  );
+}
+
+export default Card;
