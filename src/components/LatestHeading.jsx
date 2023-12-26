@@ -32,11 +32,18 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function LatestHeading({ heading, nextSlide, maxSlide, curSlide, prevSlide }) {
+function LatestHeading({
+  heading,
+  nextSlide,
+  maxSlide,
+  curSlide,
+  prevSlide,
+  color,
+}) {
   return (
     <ListNav>
       <ListNavLi>
-        <span>{heading}</span> <HiArrowRight size={30} color="#1864ab" />
+        <span>{heading}</span> <HiArrowRight size={30} color={color} />
       </ListNavLi>
       <ListNavLi>
         <Button onClick={nextSlide} disabled={maxSlide - curSlide <= 3}>

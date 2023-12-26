@@ -18,7 +18,7 @@ export const images = [
   },
   {
     image: img2,
-    subheading: 'Pochettino react to post wolves',
+    subheading: 'Pochettino react to post-Wolves 🎤',
     type: `video`,
     date: '24 DEC 2023',
   },
@@ -36,7 +36,7 @@ export const images = [
   },
   {
     image: img5,
-    subheading: 'Meme Girls Christmas Edition!',
+    subheading: 'Meme Girls Christmas Edition! 🎄',
     type: `video`,
     date: '24 DEC 2023',
   },
@@ -88,5 +88,50 @@ export const images1 = [
       'Broja interview: Injury changed me mentally... now am to push forward',
     type: `MEN'S TEAM`,
     date: '11 DEC 2023',
+  },
+];
+
+export const images2 = [
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/The%205th%20Stand%20app%20editorial/Assets/CFC.XMAS.21.11.236836.jpg',
+    subheading: 'A Christmas Message from Mauricio and Emma!',
+    type: 'club',
+    date: '25 DEC 2023',
+  },
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/editorial/match-reports/2023-24/Wolves%20away/disasi-post-wolves-a.jpg',
+    subheading: 'Disasi happy for Nkunku but frustrated at result',
+    type: `Men's team`,
+    date: '25 DEC 2023',
+  },
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/editorial/news/2023/12/19/GettyImages-1452759505.jpg',
+    subheading: 'Merry Christmas from chelsea FC',
+    type: 'club',
+    date: '25 DEC 2023',
+  },
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/editorial/match-reports/2023-24/Wolves%20away/GettyImages-1879614187.jpg',
+    subheading: 'Pochettino rue lack of clinical edge at Wolves',
+    type: `men's team`,
+    date: '24 DEC 2023',
+  },
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/video/2023/12/24/2MINS_Wolves_2-1_Chelsea_EPL_2023-24.jpg',
+    subheading: 'Highlights: Wolves 2-1 Chelsea',
+    type: 'video',
+    date: '24 DEC 2023',
+  },
+  {
+    image:
+      'https://img.chelseafc.com/image/upload/f_auto,ar_16:9,w_500,c_fill,g_auto,q_90/video/2023/12/24/16x9_Poch_post-Wolves_2-1_Chelsea_EPL_2023-24.jpg',
+    subheading: 'Pochettino reacts post-Wolves 🎤',
+    type: 'video',
+    date: '24 DEC 2023',
   },
 ];

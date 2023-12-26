@@ -46,6 +46,7 @@ function LatestNew({
         prevSlide={prevSlide}
         maxSlide={maxSlide}
         heading={heading}
+        color={color}
       />
 
       <Card

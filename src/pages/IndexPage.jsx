@@ -5,7 +5,7 @@ import Advert from '../components/Advert';
 // import MyNewLatest from '../components/MyNewLatest';
 import TabComponent from '../components/TabComponent';
 import LatestNew from '../components/LatestNew';
-import { images, images1 } from '../components/imgArrays';
+import { images, images1, images2 } from '../components/imgArrays';
 
 const StyledIndexPage = styled.div`
   display: flex;
@@ -22,6 +22,11 @@ const imageArr1 = images1.map((img) => img.image);
 const subheading1 = images1.map((img) => img.subheading);
 const type1 = images1.map((img) => img.type);
 const date1 = images1.map((img) => img.date);
+
+const imageArr2 = images2.map((img) => img.image);
+const subheading2 = images2.map((img) => img.subheading);
+const type2 = images2.map((img) => img.type);
+const date2 = images2.map((img) => img.date);
 
 function IndexPage() {
   return (
@@ -50,8 +55,17 @@ function IndexPage() {
         subheading={subheading1}
         date={date1}
         type={type1}
-        background="#001489;"
+        background="#001489"
         color="#fff"
+      />
+      <LatestNew
+        heading="Latest News"
+        color="#001489"
+        background="#fff"
+        images={imageArr2}
+        subheading={subheading2}
+        date={date2}
+        type={type2}
       />
     </>
   );

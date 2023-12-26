@@ -13,7 +13,7 @@ const SliderContainer = styled.div`
 const Cards = styled.div`
   display: flex;
   flex-direction: column;
-  width: 37rem;
+  width: 39rem;
   height: 45rem;
   justify-content: flex-start;
   align-items: flex-start;
@@ -23,6 +23,7 @@ const Cards = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
   /* transform: translateX(0); */
 
   ${(props) =>
@@ -35,7 +36,7 @@ const Cards = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: 20rem;
+  height: 22rem;
   transition: transform 0.7s ease-in-out;
   /* overflow: hidden; */
   ${Cards}:hover & {
@@ -53,7 +54,7 @@ const Div = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: inherit;
 `;
 
