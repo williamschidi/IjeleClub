@@ -6,6 +6,7 @@ import Advert from '../components/Advert';
 import TabComponent from '../components/TabComponent';
 import LatestNew from '../components/LatestNew';
 import { images, images1, images2 } from '../components/imgArrays';
+import ProfileSection from '../components/ProfileSection';
 
 const StyledIndexPage = styled.div`
   display: flex;
@@ -67,6 +68,7 @@ function IndexPage() {
         date={date2}
         type={type2}
       />
+      <ProfileSection />
     </>
   );
 }
