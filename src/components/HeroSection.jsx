@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-// import ProgressBar from './ProgressBar';
+import { indexImages as images } from './imgArrays';
+import ProgressbarContainer from './ProgressbarContainer';
 
 const BackgroundContainer = styled.div`
   position: relative;
@@ -9,16 +10,6 @@ const BackgroundContainer = styled.div`
   justify-content: center;
   max-width: 100%;
   height: 100%;
-  /* z-index: -5; */
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.8;
-  z-index: -1;
 `;
 
 const BackgroundImage = styled.img`
@@ -37,29 +28,31 @@ const BackgroundImage = styled.img`
     `}
 `;
 
-const MatchNew = styled.div`
+const TextContainer = styled.p`
   position: absolute;
-  bottom: 10rem;
-  right: 65%;
-  width: 40rem;
-  height: 10rem;
+  bottom: 3rem;
+  left: 10rem;
 
-  border-right: 1px solid #868e96;
-  background: #ced4da;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  width: 40%;
 
-  z-index: 5;
+  padding: 0 0 2rem 0;
+  border-radius: 5px;
+`;
+const Text = styled.div`
+  color: #fff;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 2rem 3rem;
+  opacity: 1;
   ${(props) =>
-    props.ind &&
+    props.type === 'current' &&
     css`
-      transform: translateX(${100 * props.ind}%);
+      opacity: 1;
+      z-index: -1;
+      transition: none;
     `}
 `;
-
-const images = [
-  { src: 'pic5.jpg', alt: 'pic5' },
-  { src: 'pic6.jpg', alt: 'pic6' },
-  { src: 'pic8.jpg', alt: 'pic8' },
-];
 
 function HeroSection() {
   const [imageInd, setImageInd] = useState(0);
@@ -73,8 +66,8 @@ function HeroSection() {
   }, []);
 
   return (
-    <BackgroundContainer>
-      <Overlay>
+    <>
+      <BackgroundContainer>
         {images.map((img, ind) => (
           <>
             <BackgroundImage
@@ -83,71 +76,16 @@ function HeroSection() {
               alt={img.alt}
               type={ind === imageInd ? 'current' : ''}
             />
-            <MatchNewBar />
+
+            <ProgressbarContainer imageInd={imageInd} />
           </>
         ))}
-        {images.map(
-          (img, ind) => ind === imageInd && <ProgressBar key={ind} />
-        )}
-      </Overlay>
-    </BackgroundContainer>
-  );
-}
+      </BackgroundContainer>
 
-function MatchNewBar() {
-  return (
-    <>
-      {images.map((_, ind) => (
-        <MatchNew ind={ind} key={ind}>
-          {/* <ProgressBar ind={ind} /> */}
-        </MatchNew>
-      ))}
+      <TextContainer>
+        <Text>{images[imageInd].text}</Text>
+      </TextContainer>
     </>
-  );
-}
-
-const ProgressBarContainer = styled.div`
-  width: 10rem;
-  margin: 20px;
-`;
-
-const Progress = styled.div`
-  position: absolute;
-  bottom: 10rem;
-  left: 7rem;
-  height: 5px;
-  background-color: #000;
-  transition: width 0.3s ease-in-out;
-  ${(props) =>
-    props.width &&
-    css`
-      width: ${props.width / 3}%;
-    `}
-  z-index: 6;
-`;
-
-function ProgressBar() {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const duration = 5000;
-    const interval = 100;
-    let elapseTime = 0;
-    const updateProgress = () => {
-      elapseTime += interval;
-      const calculatedProgress = (elapseTime / duration) * 100;
-      setProgress(calculatedProgress);
-      if (calculatedProgress >= 100) {
-        clearInterval(progressInterval);
-      }
-    };
-    const progressInterval = setInterval(updateProgress, interval);
-    return () => clearInterval(progressInterval);
-  }, []);
-  return (
-    <ProgressBarContainer>
-      {progress < 100 && <Progress width={progress}></Progress>}
-    </ProgressBarContainer>
   );
 }
 

@@ -135,3 +135,21 @@ export const images2 = [
     date: '24 DEC 2023',
   },
 ];
+
+export const indexImages = [
+  {
+    src: 'pic5.jpg',
+    alt: 'pic5',
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+  },
+  {
+    src: 'pic6.jpg',
+    alt: 'pic6',
+    text: 'Itaque dolorem quo nesciunt vero suscipit sint enim nemo modi commodi!',
+  },
+  {
+    src: 'pic8.jpg',
+    alt: 'pic8',
+    text: 'Dignissimos doloribus ipsam quidem impedit eius? Totam quisquam beatae velit sit?',
+  },
+];

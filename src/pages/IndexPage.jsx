@@ -32,8 +32,8 @@ const date2 = images2.map((img) => img.date);
 function IndexPage() {
   return (
     <>
+      <Nav />
       <StyledIndexPage>
-        <Nav />
         <HeroSection />
       </StyledIndexPage>
 

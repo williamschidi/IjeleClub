@@ -10,7 +10,7 @@ const NavStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0;
   gap: 3rem;
 `;
 
