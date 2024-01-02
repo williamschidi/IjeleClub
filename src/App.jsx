@@ -10,6 +10,9 @@ import ShopPage from './pages/ShopPage';
 import Watch from './pages/Watch';
 import SearchPage from './pages/SearchPage';
 import MatchDetailsPage from './pages/MatchDetailsPage';
+import HeroSectionDetailPage1 from './pages/HeroSectionDetailPage1';
+import HeroSectionDetailPage2 from './pages/HeroSectionDetailPage2';
+import HeroSectionDetailPage3 from './pages/HeroSectionDetailPage3';
 
 const Container = styled.div`
   margin: 0;
@@ -32,6 +35,18 @@ function App() {
           <Route path="watch" element={<Watch />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="matchDetails" element={<MatchDetailsPage />} />
+          <Route
+            path="heroSectionDetailPage1"
+            element={<HeroSectionDetailPage1 />}
+          />
+          <Route
+            path="heroSectionDetailPage2"
+            element={<HeroSectionDetailPage2 />}
+          />
+          <Route
+            path="heroSectionDetailPage3"
+            element={<HeroSectionDetailPage3 />}
+          />
         </Routes>
       </BrowserRouter>
     </Container>
