@@ -32,6 +32,7 @@ const Text = styled.p`
   color: #001489;
   padding: 1.4rem 2rem;
   font-weight: bold;
+  line-height: 1.4;
   text-decoration: none;
 `;
 

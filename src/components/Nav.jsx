@@ -10,8 +10,9 @@ const NavStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0 0;
+  /* padding: 1rem 0 0; */
   gap: 3rem;
+  border-top: 5px solid #001489;
 `;
 
 const RightSide = styled.ul`
