@@ -7,6 +7,8 @@ import TabComponent from '../components/TabComponent';
 import LatestNew from '../components/LatestNew';
 import { images, images1, images2 } from '../components/imgArrays';
 import ProfileSection from '../components/ProfileSection';
+import Sponsor from '../components/Sponsor';
+import Footer from '../components/Footer';
 
 const StyledIndexPage = styled.div`
   display: flex;
@@ -69,6 +71,8 @@ function IndexPage() {
         type={type2}
       />
       <ProfileSection />
+      <Sponsor />
+      <Footer />
     </>
   );
 }

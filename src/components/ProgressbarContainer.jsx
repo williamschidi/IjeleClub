@@ -8,7 +8,7 @@ const MatchNew = styled(NavLink)`
   position: absolute;
   bottom: 1rem;
   right: 65%;
-  width: 38rem;
+  max-width: 38rem;
   height: 10rem;
   border-right: 1px solid #868e96;
   text-decoration: none;
