@@ -5,7 +5,7 @@ const AdvertSection = styled.div`
   position: relative;
   max-width: 110rem;
   padding: 1rem 0;
-  background: #f8f9fa;
+  background: var(--advertBackground-color);
   margin: 3rem auto;
   text-align: center;
   display: flex;
@@ -22,15 +22,15 @@ const ButtonPrimary = styled.button`
   ${(props) =>
     props.type === 'primary' &&
     css`
-      background: #1c7ed6;
-      color: #fff;
+      background: var(--primary-color);
+      color: var(--white-color);
     `}
 
   ${(props) =>
     props.type === 'secondary' &&
     css`
-      background: #fff;
-      color: #9e9ea6;
+      background: var(--white-color);
+      color: var(--intermediate-color);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -48,7 +48,7 @@ const ButtonPrimary = styled.button`
 const H1 = styled.h1`
   font-weight: 400;
   font-size: 1.6rem;
-  color: #9e9ea6;
+  color: var(--intermediate-color);
   font-family: 'Arial', sans-serif;
 `;
 const Span = styled.span`
@@ -66,7 +66,11 @@ function Advert() {
   return (
     <AdvertSection>
       <SpanArrow>
-        <HiArrowLeft size={15} color="#868e96" fontWeight="bold" />
+        <HiArrowLeft
+          size={15}
+          color="var(--intermediate-tint-color)"
+          fontWeight="bold"
+        />
       </SpanArrow>
       <H1>
         Ads by <Span>Google</Span>

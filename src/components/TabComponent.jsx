@@ -11,7 +11,7 @@ import { useState } from 'react';
 const TabContainer = styled.div`
   position: relative;
   margin-top: 10rem;
-  background: #339af0;
+  background: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -24,7 +24,7 @@ const TabContent = styled.div`
   display: none;
   width: 36rem;
   height: 27rem;
-  background: #fff;
+  background: var(--white-color);
 
   padding: 1.5rem;
   gap: 0.3rem;
@@ -63,22 +63,22 @@ const Li = styled.li`
   border-radius: 5rem;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #001489;
+  color: var(--primary-color);
   text-transform: uppercase;
   cursor: pointer;
   &.active {
-    background: white;
+    background: var(--white-color);
   }
 `;
 const Dates = styled.div`
   text-transform: uppercase;
   font-size: 1.4rem;
-  color: #343a40;
+  color: var(--intermediate-shade-color);
   font-weight: bold;
 `;
 const Title = styled.div`
   font-size: 1rem;
-  color: #868e96;
+  color: var(--intermediate-tint-color);
   text-transform: uppercase;
   letter-spacing: 1px;
 `;
@@ -100,23 +100,23 @@ const Img = styled.img`
 const TeamHome = styled.div`
   font-size: 1.1rem;
   font-weight: bold;
-  color: #001489;
+  color: var(--primary-color);
   text-align: center;
 `;
 const TeamAway = styled.div`
   font-size: 1.1rem;
   font-weight: bold;
-  color: #001489;
+  color: var(--primary-color);
   grid-column: 3/4;
   grid-row: 2/3;
   text-align: center;
 `;
 
 const MatchTime = styled.div`
-  color: #001489;
+  color: var(--primary-color);
   width: 9rem;
   height: 6rem;
-  border: 1px solid #adb5bd;
+  border: 1px solid var(--intermediate-tint-color);
   padding: 0.4rem 0.8rem;
   display: flex;
   justify-content: center;
@@ -129,11 +129,11 @@ const MatchDetail = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
   padding: 1.5rem 9rem;
   font-weight: bold;
-  background: #001489;
+  background: var(--primary-color);
   gap: 1rem;
   border: none;
   font-size: 1.4rem;
@@ -153,7 +153,6 @@ function TabComponent() {
             className={`tab ${activeTab === 'tab1' ? 'active' : ''}`}
             onClick={() => handleTabClick('tab1')}
           >
-            {console.log(activeTab)}
             Men
           </Li>
           <Li
@@ -187,7 +186,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -210,7 +209,7 @@ function TabComponent() {
 
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -231,7 +230,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -252,7 +251,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -273,7 +272,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -294,7 +293,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -315,7 +314,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -336,7 +335,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>
@@ -357,7 +356,7 @@ function TabComponent() {
         </Teams>
         <NavLink to="matchDetails">
           <MatchDetail>
-            match center <HiArrowRight size={15} color="#fff" />
+            match center <HiArrowRight size={15} color="var(--white-color)" />
           </MatchDetail>
         </NavLink>
       </TabContent>

@@ -47,8 +47,8 @@ function IndexPage() {
         subheading={subheading}
         date={date}
         type={type}
-        color="#001489"
-        background="#fff"
+        color="var(--primary-color)"
+        background="var(--white-color)"
       />
       <Advert />
       <TabComponent />
@@ -58,13 +58,13 @@ function IndexPage() {
         subheading={subheading1}
         date={date1}
         type={type1}
-        background="#001489"
-        color="#fff"
+        background="var(--primary-color)"
+        color="var(--white-color)"
       />
       <LatestNew
         heading="Latest News"
-        color="#001489"
-        background="#fff"
+        color="var(--primary-color)"
+        background="var(--white-color)"
         images={imageArr2}
         subheading={subheading2}
         date={date2}

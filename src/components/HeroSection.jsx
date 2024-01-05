@@ -40,7 +40,7 @@ const TextContainer = styled.p`
   border-radius: 5px;
 `;
 const Text = styled.div`
-  color: #fff;
+  color: var(--white-color);
   font-size: 4rem;
   font-weight: bold;
   padding: 2rem 3rem;

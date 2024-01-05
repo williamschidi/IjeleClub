@@ -9,7 +9,7 @@ const Ul = styled.ul`
 `;
 
 const Li = styled.li`
-  color: #001489;
+  color: var(--primary-color);
   font-size: 1.8rem;
   font-weight: bold;
   padding: 5rem 2.5rem;
@@ -18,7 +18,7 @@ const Li = styled.li`
 
   transition: opacity 0.3s ease-in-out, border-botton 0.3s ease-in-out;
   &:hover {
-    border-bottom: 4px solid #001489;
+    border-bottom: 4px solid var(--primary-color);
   }
 `;
 

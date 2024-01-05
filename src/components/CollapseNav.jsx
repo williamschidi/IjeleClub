@@ -6,26 +6,24 @@ const NavButton = styled.button`
   width: 12rem;
   height: 12rem;
   border: none;
-  background: transparent;
   cursor: pointer;
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #001489;
+  background: var(--primary-color);
 `;
 const H4 = styled.div`
   font-weight: bold;
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--white-color);
 `;
 
 function CollapseNav() {
   return (
     <NavButton>
       <NavLink to="#">
-        <HiBars3 size={30} color="#fff" />
+        <HiBars3 size={30} color="var(--white-color)" />
         <H4>MORE</H4>
       </NavLink>
     </NavButton>

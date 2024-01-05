@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { BiLogoPlayStore } from 'react-icons/bi';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const FooterContainer = styled.div`
   background: #001489;
@@ -60,17 +61,16 @@ const RightFooter = styled.div`
 `;
 
 const Button = styled.button`
-  /* width: 10rem; */
   font-size: 1rem;
   padding: 0.7rem 1rem;
-  background: #212529;
   background: #151414a9;
-  border: 1px solid #fff;
+  /* background: var(--intermediate-shade-color); */
+  border: 1px solid var(--white-color);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--white-color);
   gap: 0.4rem;
 `;
 
@@ -87,11 +87,21 @@ function Footer() {
         <LeftFooter>
           <div>Ijele Football Club Address</div>
           <SocialIcons>
-            <FaFacebookSquare size={30} />
-            <FaTwitter size={30} />
-            <FaInstagram size={30} />
-            <FaYoutube size={30} />
-            <FaTiktok size={30} />
+            <NavLink to="">
+              <FaFacebookSquare size={30} color="var(--white-color)" />
+            </NavLink>
+            <NavLink to="">
+              <FaTwitter size={30} color="var(--white-color)" />
+            </NavLink>
+            <NavLink to="">
+              <FaInstagram size={30} color="var(--white-color)" />
+            </NavLink>
+            <NavLink to="">
+              <FaYoutube size={30} color="var(--white-color)" />
+            </NavLink>
+            <NavLink to="">
+              <FaTiktok size={30} color="var(--white-color)" />
+            </NavLink>
           </SocialIcons>
         </LeftFooter>
         <CenterFooter>

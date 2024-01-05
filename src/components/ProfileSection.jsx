@@ -4,7 +4,7 @@ import ProfileWomen from './ProfileWomen';
 
 const ProfileContainer = styled.div`
   height: 85vh;
-  background: #001489;
+  background: var(--primary-color);
   margin-top: 10rem;
   display: flex;
   justify-content: center;
