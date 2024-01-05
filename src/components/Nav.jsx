@@ -6,7 +6,7 @@ import Search from './Search';
 import NavCenter from './NavCenter';
 
 const NavStyled = styled.div`
-  width: 100%;
+  /* width: 100%; */
   /* max-width: 130rem; */
   height: var(--navigation-height, 20%);
   display: flex;
