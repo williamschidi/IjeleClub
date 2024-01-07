@@ -58,10 +58,10 @@ const Cards = styled.div`
     height: 40rem;
   }
 
-  @media screen and (max-width: 1000rem) {
+  /* @media screen and (max-width: 1000rem) {
     width: 30rem;
     height: 39rem;
-  }
+  } */
 `;
 
 const Img = styled.img`
