@@ -8,6 +8,23 @@ const SliderContainer = styled.div`
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 1214px) {
+    height: 90%;
+    max-width: 110rem;
+    gap: 1.2rem;
+    /* padding: 2rem; */
+  }
+
+  @media screen and (max-width: 1100px) {
+    max-width: 100rem;
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    max-width: 90rem;
+    gap: 0.5rem;
+  }
 `;
 
 const Cards = styled.div`
@@ -32,30 +49,55 @@ const Cards = styled.div`
     css`
       transform: translateX(${105 * (props.ind - props.curSlide)}%);
     `}
+  @media screen and (max-width:1214px) {
+    width: 37rem;
+    height: 43rem;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 33rem;
+    height: 40rem;
+  }
+
+  @media screen and (max-width: 1000rem) {
+    width: 30rem;
+    height: 39rem;
+  }
 `;
 
 const Img = styled.img`
   width: 100%;
   height: 22rem;
   transition: transform 0.7s ease-in-out;
-  /* overflow: hidden; */
   ${Cards}:hover & {
     transform: scale(1.05);
   }
+
+  /* @media screen and (max-width: 1100px) {
+    height: 20rem;
+    width: 33rem;
+  } */
 `;
 
 const Div = styled.div`
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  padding: 3rem 3rem 6rem;
+  padding: 3rem 2rem 6rem;
   height: 10rem;
   width: 100%;
+  @media screen and (max-width: 1100px) {
+    padding: 3rem 0.5rem 6rem;
+    width: 90%;
+  }
 `;
 
 const H2 = styled.h2`
   font-size: 1.9rem;
   color: inherit;
+
+  @media screen and (max-width: 2014px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const LatestFooter = styled.div`
@@ -77,6 +119,9 @@ const FooterSpan = styled.span`
       color: inherit;
       letter-spacing: 1.3px;
     `}
+  @media screen and (max-width:1200px) {
+    font-size: 1.3rem;
+  }
 `;
 
 function Card({ images, curSlide, cardRef, subheading, type, date }) {

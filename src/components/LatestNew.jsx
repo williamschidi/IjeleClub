@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   background: ${(props) => props.background};
   color: ${(props) => props.color};
-  height: 100vh;
+  height: 90vh;
 `;
 
 function LatestNew({

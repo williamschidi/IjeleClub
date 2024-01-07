@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-
 import CollapseNav from './CollapseNav';
 import MyLogo from './MyLogo';
 import Search from './Search';
 import NavCenter from './NavCenter';
+import { useMediaQuery } from 'react-responsive';
 
 const NavStyled = styled.div`
-  /* width: 100%; */
-  /* max-width: 130rem; */
-  height: var(--navigation-height, 20%);
+  height: 12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1rem 0 0; */
   gap: 3rem;
   border-top: 5px solid var(--primary-color);
+  @media screen and (max-width: 1200px) {
+    height: 9rem;
+  }
 `;
 
 const RightSide = styled.ul`
@@ -26,12 +26,14 @@ const RightSide = styled.ul`
 `;
 
 function Nav() {
+  const tablet = useMediaQuery({ minWidth: 1200 });
+  console.log(tablet);
   return (
     <NavStyled>
       <div>
         <MyLogo />
       </div>
-      <NavCenter />
+      {tablet ? <NavCenter /> : null}
       <RightSide>
         <Search />
         <CollapseNav />

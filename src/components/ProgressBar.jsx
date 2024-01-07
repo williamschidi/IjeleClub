@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 const Progress = styled.div`
@@ -16,7 +16,8 @@ const Progress = styled.div`
     `}
 `;
 
-function ProgressBar({ progress, setProgress, imageInd }) {
+function ProgressBar({ imageInd = null }) {
+  const [progress, setProgress] = useState(0);
   useEffect(() => {
     setProgress(0);
   }, [setProgress, imageInd]);

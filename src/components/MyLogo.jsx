@@ -8,6 +8,10 @@ const LogoContainer = styled.div`
   justify-content: center;
   margin-left: 2rem;
 
+  @media screen and (max-width: 1150px) {
+    width: 9rem;
+    height: 9rem;
+  }
   /* padding: 2rem 4rem; */
 `;
 

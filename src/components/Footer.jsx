@@ -13,6 +13,11 @@ import { NavLink } from 'react-router-dom';
 const FooterContainer = styled.div`
   background: #001489;
   padding: 6rem 10rem;
+  gap: 3rem;
+  @media screen and(max-width: 1100rem) {
+    padding: 4rem 8rem;
+    gap: 2rem;
+  }
 `;
 
 const SubFooterContainer = styled.div`

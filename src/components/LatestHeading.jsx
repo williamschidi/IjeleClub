@@ -8,7 +8,21 @@ const ListNav = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  padding: 8rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
+
+  @media screen and (max-width: 1214px) {
+    max-width: 110rem;
+    padding: 6rem 0 4rem;
+  }
+
+  @media screen and (max-width: 1100px) {
+    max-width: 100rem;
+    padding: 5rem 0 3rem;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: 90rem;
+    padding: 4rem 0 2rem;
+  }
 `;
 
 const ListNavLi = styled.li`
@@ -19,6 +33,11 @@ const ListNavLi = styled.li`
   align-items: center;
   gap: 2rem;
   color: inherit;
+
+  @media screen and (max-width: 1214px) {
+    font-size: 3.5rem;
+    gap: 1rem;
+  }
 `;
 
 const Button = styled.button`
@@ -30,6 +49,11 @@ const Button = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
+
+  /* @media screen and (max-width) {
+    width: 5rem;
+    height: 5rem;
+  } */
 `;
 
 function LatestHeading({

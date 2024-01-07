@@ -1,20 +1,12 @@
-import styled from 'styled-components';
 import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
-// import MyNewLatest from '../components/MyNewLatest';
 import TabComponent from '../components/TabComponent';
 import LatestNew from '../components/LatestNew';
 import { images, images1, images2 } from '../components/imgArrays';
 import ProfileSection from '../components/ProfileSection';
 import Sponsor from '../components/Sponsor';
 import Footer from '../components/Footer';
-
-const StyledIndexPage = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
 
 const imageArr = images.map((img) => img.image);
 const subheading = images.map((img) => img.subheading);
@@ -35,12 +27,8 @@ function IndexPage() {
   return (
     <>
       <Nav />
-      <StyledIndexPage>
-        <HeroSection />
-      </StyledIndexPage>
-
+      <HeroSection />
       <Advert />
-
       <LatestNew
         images={imageArr}
         heading="Latest Video"

@@ -18,6 +18,11 @@ const TabContainer = styled.div`
   padding-bottom: 3rem;
   gap: 6rem;
   height: 60vh;
+
+  @media screen and (max-width: 1200px) {
+    gap: 3rem;
+    height: 55vh;
+  }
 `;
 
 const TabContent = styled.div`
@@ -35,6 +40,17 @@ const TabContent = styled.div`
     align-items: center;
     justify-content: flex-start;
   }
+
+  @media screen and (max-width: 1200px) {
+    width: 32rem;
+    height: 23rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    width: 30rem;
+    height: 21rem;
+    gap: 0;
+  }
 `;
 
 const CenterTab = styled.div`
@@ -46,6 +62,11 @@ const CenterTab = styled.div`
   right: 50%;
   transform: translate(50%, -50%);
   border-radius: 15rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 50rem;
+    height: 6.5rem;
+  }
 `;
 
 const Ul = styled.ul`
@@ -69,6 +90,10 @@ const Li = styled.li`
   &.active {
     background: var(--white-color);
   }
+  @media screen and (max-width: 1200px) {
+    width: 15rem;
+    font-size: 1.4rem;
+  }
 `;
 const Dates = styled.div`
   text-transform: uppercase;
@@ -91,6 +116,11 @@ const Teams = styled.div`
   padding: 1rem 1.2rem 3.4rem 1.2rem;
   column-gap: 2rem;
   row-gap: 1.5rem;
+
+  @media screen and (max-width: 1050px) {
+    grid-template-columns: 8rem auto 8rem;
+    padding: 1rem 1.2rem 3rem 1.2rem;
+  }
 `;
 
 const Img = styled.img`
@@ -138,6 +168,17 @@ const MatchDetail = styled.button`
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
+
+  @media screen and (max-width: 1200px) {
+    padding: 1rem 8rem;
+    font-size: 1.2rem;
+    gap: 0.7rem;
+  }
+
+  @media screen and (max-width: 1050px) {
+    font-size: 1rem;
+    padding: 0.8rem 7rem;
+  }
 `;
 
 function TabComponent() {

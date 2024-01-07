@@ -3,32 +3,42 @@ import styled, { css } from 'styled-components';
 import { indexImages as images } from './imgArrays';
 import { NavLink } from 'react-router-dom';
 
+const Container = styled.ol`
+  max-width: 120rem;
+  height: 10rem;
+  background: #ced4da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  z-index: 10;
+  @media screen and (max-width: 1200px) {
+    height: 5px;
+  }
+`;
 const MatchNew = styled(NavLink)`
-  position: absolute;
-  bottom: 1rem;
-  right: 63%;
-  max-width: 36rem;
+  max-width: 33.33%;
   height: 10rem;
   border-right: 1px solid #868e96;
   text-decoration: none;
-  background: #ced4da;
-  cursor: pointer;
-  /* z-index: 5 */
   ${(props) =>
     props.ind === props.imageInd &&
     css`
       background: #fff;
+      position: relative;
     `}
-  ${(props) =>
-    props.ind &&
-    css`
-      transform: translateX(${100 * props.ind}%);
-    `};
-
-  @media screen and (max-width: 1200px) {
-    max-width: 33rem;
-    right: 64%;
+  @media screen and (max-width:1200px) {
+    border: none;
+    background: transparent;
+    height: 5px;
   }
+`;
+const ProgressBarContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 `;
 
 const Text = styled.p`
@@ -38,11 +48,15 @@ const Text = styled.p`
   font-weight: bold;
   line-height: 1.4;
   text-decoration: none;
+
+  @media screen and (max-width: 1200px) {
+    opacity: 0;
+  }
 `;
 
 function ProgressbarContainer({ imageInd }) {
   return (
-    <>
+    <Container>
       {images.map((_, ind) => (
         <MatchNew
           to={`heroSectionDetailPage${ind + 1}`}
@@ -51,10 +65,14 @@ function ProgressbarContainer({ imageInd }) {
           imageInd={imageInd}
         >
           <Text>{images[ind].text}</Text>
-          {ind === imageInd && <ProgressBar />}
+          {ind === imageInd && (
+            <ProgressBarContainer>
+              <ProgressBar />
+            </ProgressBarContainer>
+          )}
         </MatchNew>
       ))}
-    </>
+    </Container>
   );
 }
 export default ProgressbarContainer;

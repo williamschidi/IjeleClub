@@ -11,6 +11,15 @@ const AdvertSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media screen and (max-width: 1100px) {
+    max-width: 100rem;
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 1000px) {
+    max-width: 90rem;
+  }
 `;
 const ButtonContainer = styled.div`
   display: flex;
@@ -59,7 +68,7 @@ const Span = styled.span`
 const SpanArrow = styled.span`
   position: absolute;
   top: 0.5rem;
-  left: 0.5rem;
+  left: 0.8rem;
 `;
 
 function Advert() {
