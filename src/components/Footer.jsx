@@ -9,31 +9,49 @@ import {
 import { BiLogoPlayStore } from 'react-icons/bi';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 const FooterContainer = styled.div`
   background: #001489;
-  padding: 6rem 10rem;
-  gap: 3rem;
-  @media screen and(max-width: 1100rem) {
-    padding: 4rem 8rem;
-    gap: 2rem;
+  padding: 6rem 6rem;
+  gap: 2rem;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 6rem 6rem;
   }
 `;
 
 const SubFooterContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  font-size: 1.6rem;
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.8rem;
+  font-weight: bold;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.6rem;
+  }
+`;
+
+const ImgContainer = styled.div`
+  padding: 0 0 0 4rem;
+
+  @media screen and (max-width: 600rem) {
+    padding: 0 0 0 1rem;
+  }
 `;
 
 const Img = styled.img`
-  width: 10rem;
+  width: 8rem;
 `;
 
 const LeftFooter = styled.div`
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,16 +60,34 @@ const LeftFooter = styled.div`
 `;
 const SocialIcons = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 3rem;
+    /* border-bottom: 2px solid var(--white-color); */
+  }
 `;
 const CenterFooter = styled.ul`
+  width: auto;
+  padding: 4rem 2rem 4rem 4rem;
+  border-left: 1px solid var(--white-color);
+  border-right: 1px solid var(--white-color);
   display: flex;
   flex-direction: column;
   gap: 3rem;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem 3rem 2rem 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid var(--intermediate-color);
+    border-bottom: 1px solid var(--intermediate-color);
+    gap: 2rem;
+  }
 `;
 
 const Li = styled.li`
@@ -59,17 +95,20 @@ const Li = styled.li`
 `;
 
 const RightFooter = styled.div`
-  display: inline-flex;
-  /* justify-content: space-between;
-  align-items: center; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 3rem;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 3rem;
+  }
 `;
 
 const Button = styled.button`
   font-size: 1rem;
   padding: 0.7rem 1rem;
   background: #151414a9;
-  /* background: var(--intermediate-shade-color); */
   border: 1px solid var(--white-color);
   border-radius: 5px;
   display: flex;
@@ -85,27 +124,33 @@ const Span = styled.span`
 `;
 
 function Footer() {
+  const mobile = useMediaQuery({ maxWidth: 600 });
   return (
     <FooterContainer>
-      <Img src="logo.jpg" alt="logo" />
+      <ImgContainer>
+        <Img src="logo.jpg" alt="logo" />
+      </ImgContainer>
       <SubFooterContainer>
         <LeftFooter>
           <div>Ijele Football Club Address</div>
           <SocialIcons>
             <NavLink to="">
-              <FaFacebookSquare size={30} color="var(--white-color)" />
+              <FaFacebookSquare
+                size={mobile ? 25 : 30}
+                color="var(--white-color)"
+              />
             </NavLink>
             <NavLink to="">
-              <FaTwitter size={30} color="var(--white-color)" />
+              <FaTwitter size={mobile ? 25 : 30} color="var(--white-color)" />
             </NavLink>
             <NavLink to="">
-              <FaInstagram size={30} color="var(--white-color)" />
+              <FaInstagram size={mobile ? 25 : 30} color="var(--white-color)" />
             </NavLink>
             <NavLink to="">
-              <FaYoutube size={30} color="var(--white-color)" />
+              <FaYoutube size={mobile ? 25 : 30} color="var(--white-color)" />
             </NavLink>
             <NavLink to="">
-              <FaTiktok size={30} color="var(--white-color)" />
+              <FaTiktok size={mobile ? 25 : 30} color="var(--white-color)" />
             </NavLink>
           </SocialIcons>
         </LeftFooter>

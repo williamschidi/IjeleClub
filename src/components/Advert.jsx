@@ -12,13 +12,13 @@ const AdvertSection = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media screen and (max-width: 1100px) {
-    max-width: 100rem;
-    margin: 2rem auto;
+  @media screen and (max-width: 600px) {
+    max-width: 90%;
+    margin: 1.6rem auto;
   }
 
-  @media screen and (max-width: 1000px) {
-    max-width: 90rem;
+  @media screen and (min-width: 601px) and(max-width: 1000px) {
+    max-width: 90%;
   }
 `;
 const ButtonContainer = styled.div`
@@ -49,9 +49,14 @@ const ButtonPrimary = styled.button`
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
-  /* box-shadow: 0 3px 4px #ccc; */
+
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.26) !important;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
 `;
 
 const H1 = styled.h1`
@@ -59,10 +64,17 @@ const H1 = styled.h1`
   font-size: 1.6rem;
   color: var(--intermediate-color);
   font-family: 'Arial', sans-serif;
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 const Span = styled.span`
   font-size: 3rem;
   font-weight: bold;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 const SpanArrow = styled.span`

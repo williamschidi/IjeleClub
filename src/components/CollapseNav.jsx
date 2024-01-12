@@ -9,12 +9,19 @@ const NavButton = styled.button`
   border: none;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   background: var(--primary-color);
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
+    background: transparent;
+    width: 8rem;
+    height: 8rem;
+    padding: 0 2rem 0 0;
+  }
+
+  @media screen and (min-width: 601px) and(max-width: 1200px) {
     background: transparent;
   }
 `;
@@ -26,11 +33,13 @@ const H4 = styled.div`
 
 function CollapseNav() {
   const smallLaptop = useMediaQuery({ minWidth: 1201 });
+  const mobile = useMediaQuery({ maxWidth: 600 });
+
   return (
     <NavButton>
       <NavLink to="#">
         <HiBars3
-          size={30}
+          size={mobile ? 20 : 30}
           color={
             smallLaptop
               ? 'var(--white-color)'

@@ -10,6 +10,13 @@ const ProfileContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 6rem;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0 4rem;
+    gap: 1.6rem;
+    justify-content: flex-start;
+  }
 `;
 
 function ProfileSection() {

@@ -10,6 +10,9 @@ const BackgroundContainer = styled.div`
   justify-content: center;
   height: 100vh;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -39,18 +42,18 @@ const FloatContainer = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  @media screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    gap: 1rem;
+    bottom: -5rem;
+    left: 50%;
+  }
+  @media screen and (min-width: 601px) and(max-width: 1200px) {
     gap: 1rem;
     bottom: -5rem;
   }
 `;
-
-// const TextContainer = styled.p`
-//   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-//   width: 40%;
-//   padding: 0 0 2rem 0;
-//   border-radius: 5px;
-// `;
 const Text = styled.div`
   width: 40%;
   color: var(--white-color);
@@ -66,7 +69,12 @@ const Text = styled.div`
       transition: none;
     `}
 
-  @media screen and (max-width:1150px) {
+  @media screen and (max-width:600px) {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 601px) and(max-width: 1150px) {
     font-size: 2rem;
   }
 `;
@@ -95,9 +103,7 @@ function HeroSection() {
         ))}
       </BackgroundContainer>
       <FloatContainer>
-        {/* <TextContainer> */}
         <Text>{images[imageInd].text}</Text>
-        {/* </TextContainer> */}
         <ProgressBarsContainer imageInd={imageInd} />
       </FloatContainer>
     </>

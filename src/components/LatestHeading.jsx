@@ -1,4 +1,5 @@
 import { HiArrowRight, HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 
 const ListNav = styled.ul`
@@ -33,15 +34,18 @@ const ListNavLi = styled.li`
   align-items: center;
   gap: 2rem;
   color: inherit;
-
-  @media screen and (max-width: 1214px) {
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+    gap: 1.8rem;
+  }
+  @media screen and (min-width: 601px) and(max-width: 1214px) {
     font-size: 3.5rem;
     gap: 1rem;
   }
 `;
 
 const Button = styled.button`
-  background: #1864ab;
+  background: var(--secondary-color);
   width: 6rem;
   height: 6rem;
   display: flex;
@@ -64,19 +68,23 @@ function LatestHeading({
   prevSlide,
   color,
 }) {
+  const mobile = useMediaQuery({ maxWidth: 600 });
   return (
     <ListNav>
       <ListNavLi>
-        <span>{heading}</span> <HiArrowRight size={30} color={color} />
+        <span>{heading}</span>
+        <HiArrowRight size={mobile ? 20 : 30} color={color} />
       </ListNavLi>
-      <ListNavLi>
-        <Button onClick={nextSlide} disabled={maxSlide - curSlide <= 3}>
-          <HiChevronLeft color="#fff" size={30} />
-        </Button>
-        <Button onClick={prevSlide} disabled={curSlide < 1}>
-          <HiChevronRight color="#fff" size={30} />
-        </Button>
-      </ListNavLi>
+      {!mobile && (
+        <ListNavLi>
+          <Button onClick={nextSlide} disabled={maxSlide - curSlide <= 3}>
+            <HiChevronLeft color="var(--white-color)" size={30} />
+          </Button>
+          <Button onClick={prevSlide} disabled={curSlide < 1}>
+            <HiChevronRight color="var(--white-color)" size={30} />
+          </Button>
+        </ListNavLi>
+      )}
     </ListNav>
   );
 }

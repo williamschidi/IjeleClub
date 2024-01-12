@@ -8,7 +8,10 @@ const SliderContainer = styled.div`
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-
+  @media screen and (max-width: 600px) {
+    max-width: 80%;
+    gap: 0;
+  }
   @media screen and (max-width: 1214px) {
     height: 90%;
     max-width: 110rem;
@@ -49,14 +52,20 @@ const Cards = styled.div`
     css`
       transform: translateX(${105 * (props.ind - props.curSlide)}%);
     `}
-  @media screen and (max-width:1214px) {
-    width: 37rem;
-    height: 43rem;
+
+  @media screen and (max-width: 600px) {
+    width: 28rem;
+    height: 40rem;
   }
-  @media screen and (max-width: 1100px) {
+
+  /* @media screen and (max-width: 1100px) {
     width: 33rem;
     height: 40rem;
   }
+  @media screen and (max-width:1214px) {
+    width: 37rem;
+    height: 43rem;
+  } */
 
   /* @media screen and (max-width: 1000rem) {
     width: 30rem;
@@ -72,10 +81,10 @@ const Img = styled.img`
     transform: scale(1.05);
   }
 
-  /* @media screen and (max-width: 1100px) {
-    height: 20rem;
-    width: 33rem;
-  } */
+  @media screen and (max-width: 600px) {
+    height: 18rem;
+    width: 100%;
+  }
 `;
 
 const Div = styled.div`
@@ -85,9 +94,8 @@ const Div = styled.div`
   padding: 3rem 2rem 6rem;
   height: 10rem;
   width: 100%;
-  @media screen and (max-width: 1100px) {
-    padding: 3rem 0.5rem 6rem;
-    width: 90%;
+  @media screen and (max-width: 600px) {
+    padding: 3rem 0 6rem;
   }
 `;
 
@@ -95,7 +103,7 @@ const H2 = styled.h2`
   font-size: 1.9rem;
   color: inherit;
 
-  @media screen and (max-width: 2014px) {
+  @media screen and (max-width: 600px) {
     font-size: 1.6rem;
   }
 `;

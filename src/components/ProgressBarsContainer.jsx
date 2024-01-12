@@ -13,7 +13,11 @@ const Container = styled.ol`
 
   cursor: pointer;
   z-index: 10;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
+    height: 5px;
+    width: 90%;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
     height: 5px;
   }
 `;

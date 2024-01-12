@@ -6,9 +6,11 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 2rem;
-
-  @media screen and (max-width: 1150px) {
+  @media screen and (max-width: 600px) {
+    width: 6rem;
+    height: 6rem;
+  }
+  @media screen and (min-width: 601) and(max-width: 1150px) {
     width: 9rem;
     height: 9rem;
   }

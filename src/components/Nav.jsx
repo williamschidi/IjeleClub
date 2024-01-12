@@ -12,7 +12,15 @@ const NavStyled = styled.div`
   align-items: center;
   gap: 3rem;
   border-top: 5px solid var(--primary-color);
-  @media screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 600px) {
+    max-width: 60rem;
+    height: 8rem;
+    gap: 1rem;
+    padding: 0 3rem 0 1.5rem;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    gap: 4rem;
     height: 9rem;
   }
 `;
@@ -23,16 +31,26 @@ const RightSide = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  @media screen and (max-width: 600px) {
+    gap: 0.8rem;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1000px) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    gap: 0.7rem;
+  }
 `;
 
 function Nav() {
   const tablet = useMediaQuery({ minWidth: 1200 });
-  console.log(tablet);
+
   return (
     <NavStyled>
-      <div>
-        <MyLogo />
-      </div>
+      <MyLogo />
+
       {tablet ? <NavCenter /> : null}
       <RightSide>
         <Search />

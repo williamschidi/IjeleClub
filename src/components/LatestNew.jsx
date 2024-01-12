@@ -7,6 +7,12 @@ const Container = styled.div`
   background: ${(props) => props.background};
   color: ${(props) => props.color};
   height: 90vh;
+
+  @media screen and (max-width: 600px) {
+    max-width: 100%;
+    height: 80vh;
+    padding: 0 3rem;
+  }
 `;
 
 function LatestNew({

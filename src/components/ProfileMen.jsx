@@ -14,6 +14,11 @@ const Container = styled.div`
   &:hover {
     background-position: 40% 0;
   }
+
+  @media screen and (max-width: 600px) {
+    flex-basis: 60rem;
+    max-width: 60rem;
+  }
 `;
 
 const Span = styled.span`
