@@ -47,7 +47,7 @@ const FloatContainer = styled.div`
   @media screen and (max-width: 600px) {
     width: 80%;
     gap: 1rem;
-    bottom: 6rem;
+    bottom: 5rem;
     left: 50%;
   }
   @media screen and (min-width: 601px) and(max-width: 1200px) {

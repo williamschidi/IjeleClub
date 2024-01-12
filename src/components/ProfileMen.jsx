@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: relative;
   width: 33rem;
-  height: 40rem;
+  height: 70vh;
   background: linear-gradient(
     to right,
     var(--white-color) 50%,
@@ -17,7 +17,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 600px) {
     flex-basis: 100rem;
-    /* max-width: 60rem; */
+    height: 60vh;
   }
 `;
 

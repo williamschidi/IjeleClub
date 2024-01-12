@@ -14,7 +14,7 @@ const ProfileContainer = styled.div`
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    height: 80%;
+    height: 70vh;
     padding: 0 3rem;
     gap: 1.6rem;
     justify-content: flex-start;

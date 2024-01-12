@@ -14,7 +14,9 @@ const Container = styled.div`
   &:hover {
     background-position: 40% 0;
   }
-  overflow-x: hidden;
+  @media screen and (max-width: 600px) {
+    height: 60vh;
+  }
 `;
 
 const Span = styled.span`
