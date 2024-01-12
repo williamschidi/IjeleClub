@@ -6,11 +6,11 @@ import styled from 'styled-components';
 const Container = styled.div`
   background: ${(props) => props.background};
   color: ${(props) => props.color};
-  height: 90vh;
+  height: 85vh;
 
   @media screen and (max-width: 600px) {
     max-width: 100%;
-    height: 80vh;
+    height: 70vh;
     padding: 0 3rem;
   }
 `;

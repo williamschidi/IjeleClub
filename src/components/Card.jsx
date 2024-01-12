@@ -33,7 +33,7 @@ const SliderContainer = styled.div`
 const Cards = styled.div`
   display: flex;
   flex-direction: column;
-  width: 39rem;
+  width: 37rem;
   height: 45rem;
   justify-content: flex-start;
   align-items: flex-start;

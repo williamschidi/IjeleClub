@@ -102,6 +102,7 @@ const RightFooter = styled.div`
 
   @media screen and (max-width: 600px) {
     padding-top: 3rem;
+    gap: 1rem;
   }
 `;
 
@@ -109,18 +110,26 @@ const Button = styled.button`
   font-size: 1rem;
   padding: 0.7rem 1rem;
   background: #151414a9;
-  border: 1px solid var(--white-color);
+  border: 1px solid var(--intermediate-color);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--white-color);
   gap: 0.4rem;
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    gap: 0.2rem;
+  }
 `;
 
 const Span = styled.span`
   font-size: 1.7rem;
   font-weight: bold;
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 
 function Footer() {

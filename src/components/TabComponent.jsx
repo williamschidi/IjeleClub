@@ -85,7 +85,7 @@ const CenterTab = styled.div`
   border-radius: 15rem;
 
   @media screen and (max-width: 600px) {
-    width: 40rem;
+    width: 30rem;
     border-radius: 10rem;
     height: 5rem;
   }
@@ -97,7 +97,7 @@ const CenterTab = styled.div`
 
 const Ul = styled.ul`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -118,11 +118,9 @@ const Li = styled.li`
     background: var(--white-color);
   }
   @media screen and (max-width: 600px) {
-    width: 12rem;
+    width: 9.4rem;
     font-size: 1.1rem;
-    padding: 1.2rem 4.4rem;
-
-    /* &.active{} */
+    padding: 1.2rem 2.4rem;
   }
 
   @media screen and (min-width: 601px) and (max-width: 1200px) {

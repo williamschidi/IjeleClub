@@ -6,7 +6,7 @@ const AdvertSection = styled.div`
   max-width: 110rem;
   padding: 1rem 0;
   background: var(--advertBackground-color);
-  margin: 3rem auto;
+  margin: 3rem auto 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
