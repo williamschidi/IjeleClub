@@ -18,7 +18,7 @@ const FooterContainer = styled.div`
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    padding: 6rem 6rem;
+    padding: 6rem 3rem;
   }
 `;
 
@@ -119,8 +119,8 @@ const Button = styled.button`
   gap: 0.4rem;
   @media screen and (max-width: 600px) {
     font-size: 0.8rem;
-    padding: 0.5rem 0.8rem;
-    gap: 0.2rem;
+    padding: 0.5rem 0.7rem;
+    gap: 0.15rem;
   }
 `;
 
@@ -171,14 +171,14 @@ function Footer() {
         </CenterFooter>
         <RightFooter>
           <Button>
-            <FaApple size={30} />
+            <FaApple size={mobile ? 25 : 30} />
             <p>
               Download on the <br />
               <Span>App Store</Span>
             </p>
           </Button>
           <Button>
-            <BiLogoPlayStore size={30} />
+            <BiLogoPlayStore size={mobile ? 25 : 30} />
             <p>
               GET IT ON <br />
               <Span>Google Play</Span>

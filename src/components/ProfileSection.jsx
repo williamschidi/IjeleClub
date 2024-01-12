@@ -10,10 +10,12 @@ const ProfileContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  /* overflow-x: hidden; */
 
   @media screen and (max-width: 600px) {
     width: 100%;
-    padding: 0 4rem;
+    height: 80%;
+    padding: 0 3rem;
     gap: 1.6rem;
     justify-content: flex-start;
   }

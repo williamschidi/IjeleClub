@@ -16,8 +16,8 @@ const Container = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    flex-basis: 60rem;
-    max-width: 60rem;
+    flex-basis: 100rem;
+    /* max-width: 60rem; */
   }
 `;
 
@@ -29,6 +29,11 @@ const Span = styled.span`
   color: transparent;
   -webkit-text-stroke: 1px var(--primary-color);
   text-shadow: 3px 1px var(--primary-color);
+
+  @media screen and (max-width: 600px) {
+    font-size: 5rem;
+    padding: 2rem 0.7rem;
+  }
 `;
 
 const Img = styled.img`

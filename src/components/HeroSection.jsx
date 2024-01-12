@@ -12,6 +12,7 @@ const BackgroundContainer = styled.div`
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   @media screen and (max-width: 600px) {
     max-width: 100%;
+    height: calc(100vh - 12rem);
   }
 `;
 
@@ -46,7 +47,7 @@ const FloatContainer = styled.div`
   @media screen and (max-width: 600px) {
     width: 80%;
     gap: 1rem;
-    bottom: -5rem;
+    bottom: 6rem;
     left: 50%;
   }
   @media screen and (min-width: 601px) and(max-width: 1200px) {

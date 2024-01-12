@@ -14,6 +14,7 @@ const Container = styled.div`
   &:hover {
     background-position: 40% 0;
   }
+  overflow-x: hidden;
 `;
 
 const Span = styled.span`
@@ -24,6 +25,11 @@ const Span = styled.span`
   color: transparent;
   -webkit-text-stroke: 1px var(--primary-color);
   text-shadow: 3px 1px var(--primary-color);
+
+  @media screen and (max-width: 600px) {
+    font-size: 5rem;
+    padding: 2rem 0.7rem;
+  }
 `;
 
 const ImgDiv = styled.div`
