@@ -54,7 +54,7 @@ const Cards = styled.div`
     `}
 
   @media screen and (max-width: 600px) {
-    width: 28rem;
+    width: 30rem;
     height: 40rem;
   }
 

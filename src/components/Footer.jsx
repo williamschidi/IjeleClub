@@ -13,7 +13,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const FooterContainer = styled.div`
   background: #001489;
-  padding: 6rem 6rem;
+  padding: 6rem 4rem;
   gap: 2rem;
 
   @media screen and (max-width: 600px) {

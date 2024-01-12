@@ -33,7 +33,7 @@ const TabContentContainer = styled.div`
     gap: 2rem;
     width: 55rem;
     height: 50vh;
-    margin-top: 6rem;
+    margin-top: 4rem;
     overflow-x: hidden;
   }
 `;
