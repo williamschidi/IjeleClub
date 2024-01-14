@@ -5,6 +5,7 @@ const SponsorContainer = styled.div`
   background: #fff;
   @media screen and (max-width: 600px) {
     width: 90%;
+    height: 50vh;
   }
 `;
 

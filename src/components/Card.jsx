@@ -1,3 +1,4 @@
+// import { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
 const SliderContainer = styled.div`
@@ -16,7 +17,6 @@ const SliderContainer = styled.div`
     height: 90%;
     max-width: 110rem;
     gap: 1.2rem;
-    /* padding: 2rem; */
   }
 
   @media screen and (max-width: 1100px) {
@@ -57,20 +57,6 @@ const Cards = styled.div`
     width: 30rem;
     height: 40rem;
   }
-
-  /* @media screen and (max-width: 1100px) {
-    width: 33rem;
-    height: 40rem;
-  }
-  @media screen and (max-width:1214px) {
-    width: 37rem;
-    height: 43rem;
-  } */
-
-  /* @media screen and (max-width: 1000rem) {
-    width: 30rem;
-    height: 39rem;
-  } */
 `;
 
 const Img = styled.img`
@@ -132,11 +118,29 @@ const FooterSpan = styled.span`
   }
 `;
 
-function Card({ images, curSlide, cardRef, subheading, type, date }) {
+function Card({
+  images,
+  curSlide,
+  cardRef,
+  subheading,
+  type,
+  date,
+  handleTouchStart,
+  handleTouchMove,
+  handleTouchEnd,
+}) {
   return (
     <SliderContainer ref={cardRef} className="cardContainer">
       {images.map((img, ind) => (
-        <Cards key={img} curSlide={curSlide} ind={ind}>
+        <Cards
+          key={img}
+          curSlide={curSlide}
+          ind={ind}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          // translateX={translateX}
+        >
           <Img src={img} alt={img} />
           <Div>
             <H2>{subheading.at(ind)}</H2>

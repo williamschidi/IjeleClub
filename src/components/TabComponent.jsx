@@ -12,29 +12,34 @@ const TabContainer = styled.div`
   position: relative;
   margin-top: 10rem;
   background: var(--secondary-color);
+  padding: 10rem 3rem 3rem;
+  height: 70vh;
 
-  padding: 0 3rem 3rem;
-
-  height: 60vh;
-
-  @media screen and (min-width: 601px) and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
+    padding: 4rem 3rem 3rem;
+    height: 60vh;
+  }
+  /* @media screen and (min-width: 601px) and (max-width: 1200px) {
     gap: 3rem;
     height: 55vh;
-  }
+  } */
 `;
 const TabContentContainer = styled.div`
   max-width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-end;
-  gap: 6rem;
+  gap: 4rem;
+  margin: 0 auto;
+  /* margin-top: 8rem; */
 
   @media screen and (max-width: 600px) {
     gap: 2rem;
     width: 55rem;
     height: 50vh;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     overflow-x: hidden;
+    justify-content: flex-start;
   }
 `;
 

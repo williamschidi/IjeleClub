@@ -26,6 +26,9 @@ function LatestNew({
 }) {
   const [curSlide, setCurSlide] = useState(0);
 
+  const [startX, setStartX] = useState(null);
+  const [translateX, setTranslateX] = useState(0);
+
   const maxSlide = images.length;
 
   const nextSlide = () => {
@@ -35,6 +38,27 @@ function LatestNew({
   const prevSlide = () => {
     setCurSlide((prevSlide) => prevSlide - 1);
   };
+
+  function handleTouchStart(e) {
+    setStartX(e.touches[0].clientX);
+  }
+  function handleTouchMove(e) {
+    if (startX === null) return;
+    const currentX = e.touches[0].clientX;
+    const difference = startX - currentX;
+
+    setTranslateX(difference);
+  }
+
+  function handleTouchEnd() {
+    const threshold = 50;
+    if (translateX > threshold) {
+      setCurSlide((prevSlide) => prevSlide + 1);
+    } else if (translateX < -threshold) {
+      setCurSlide((prevSlide) => prevSlide - 1);
+    }
+    setStartX(null);
+  }
 
   const cardRef = useRef(null);
 
@@ -62,6 +86,9 @@ function LatestNew({
         subheading={subheading}
         type={type}
         date={date}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       />
     </Container>
   );
