@@ -51,11 +51,13 @@ function LatestNew({
   }
 
   function handleTouchEnd() {
-    const threshold = 50;
+    const threshold = 30;
     if (translateX > threshold) {
       setCurSlide((prevSlide) => prevSlide + 1);
+      console.log('right');
     } else if (translateX < -threshold) {
       setCurSlide((prevSlide) => prevSlide - 1);
+      console.log('left');
     }
     setStartX(null);
   }
