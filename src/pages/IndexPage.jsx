@@ -77,7 +77,6 @@ function IndexPage() {
       <ProfileSection />
       <Sponsor />
       <Footer />
-     
     </Container>
   );
 }

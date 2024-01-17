@@ -11,10 +11,6 @@ const Container = styled.div`
 const SwiperStyled = styled(Swiper)`
   max-width: 80rem;
   padding: 5rem;
-
-  @media screen and (max-width: 600px) {
-    padding: 8rem 4rem;
-  }
   /* margin: 0 auto; */
 `;
 
@@ -28,7 +24,7 @@ function ProfileSection1() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 5 : 100}
+        spaceBetween={isMobile ? 15 : 100}
         slidesPerView={isMobile ? 1 : 2}
         pagination={{ clickable: true }}
         threshold={5}

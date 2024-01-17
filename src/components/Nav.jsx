@@ -15,7 +15,7 @@ const NavStyled = styled.div`
 
   @media screen and (max-width: 600px) {
     max-width: 60rem;
-    height: 8rem;
+    height: 10rem;
     gap: 1rem;
     padding: 0 0.5rem 0 1rem;
   }
