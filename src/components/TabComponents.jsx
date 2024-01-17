@@ -35,7 +35,7 @@ const SwiperStyled = styled(Swiper)`
     height: 31rem;
   }
   @media screen and (max-width: 600px) {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
   }
 `;
 
@@ -50,7 +50,7 @@ const TabContent = styled.div`
   height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 30rem;
+    width: 28rem;
     height: 23rem;
   }
 
@@ -161,7 +161,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 5 : 20}
+        spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true, backgroundColor: 'white ' }}
         threshold={5}
@@ -238,7 +238,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 5 : 20}
+        spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}
@@ -313,7 +313,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 5 : 20}
+        spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}
