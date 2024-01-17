@@ -18,7 +18,7 @@ const TabContainer = styled.div`
 
   @media screen and (max-width: 600px) {
     padding: 4rem 3rem 3rem;
-    height: 60vh;
+    height: 55vh;
   }
 `;
 const TabContentContainer = styled.div`
@@ -32,7 +32,7 @@ const TabContentContainer = styled.div`
   @media screen and (max-width: 600px) {
     gap: 2rem;
     width: 55rem;
-    height: 50vh;
+    height: 45vh;
     overflow-x: hidden;
     justify-content: flex-start;
   }

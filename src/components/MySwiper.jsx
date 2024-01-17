@@ -28,6 +28,11 @@ const H1 = styled.h1`
   font-size: 4rem;
   font-weight: bold;
   padding: 6rem 0 4rem;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+    padding: 5rem 3rem 2rem;
+  }
 `;
 const SwiperStyled = styled(Swiper)`
   height: 45rem;
@@ -51,6 +56,10 @@ const SwiperStyled = styled(Swiper)`
   }
   .swiper-button-prev {
     left: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 0 3rem;
   }
 `;
 
@@ -144,13 +153,13 @@ function MySwiper({
             prevEl: '.swiper-button-prev',
           }}
           speed={1000}
-          spaceBetween={10}
+          spaceBetween={isMobile ? 30 : 10}
           slidesPerView={isMobile ? 1 : 3}
           pagination={{ clickable: true }}
           threshold={5}
         >
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-button-next"></div>
+          {!isMobile && <div className="swiper-button-prev"></div>}
+          {!isMobile && <div className="swiper-button-next"></div>}
 
           {images.map((img, ind) => (
             <SwiperSlide key={ind}>

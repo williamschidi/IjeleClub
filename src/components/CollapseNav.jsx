@@ -9,7 +9,7 @@ const NavButton = styled.button`
   border: none;
   cursor: pointer;
   display: flex;
-  /* flex-direction: column; */
+
   justify-content: center;
   align-items: center;
   background: var(--primary-color);
@@ -18,7 +18,7 @@ const NavButton = styled.button`
     background: transparent;
     width: 8rem;
     height: 8rem;
-    padding: 0 2rem 0 0;
+    padding: 0 1rem 0 0;
   }
 
   @media screen and (min-width: 601px) and(max-width: 1200px) {

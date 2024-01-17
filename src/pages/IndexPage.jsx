@@ -52,15 +52,7 @@ function IndexPage() {
         color="var(--primary-color)"
         background="var(--white-color)"
       />
-      {/* <LatestNew
-        images={imageArr}
-        heading="Latest Video"
-        subheading={subheading}
-        date={date}
-        type={type}
-        color="var(--primary-color)"
-        background="var(--white-color)"
-      /> */}
+
       <Advert />
       <TabComponent />
       <MySwiper
@@ -72,15 +64,7 @@ function IndexPage() {
         background="var(--primary-color)"
         color="var(--white-color)"
       />
-      {/* <LatestNew
-        images={imageArr1}
-        heading="Interview"
-        subheading={subheading1}
-        date={date1}
-        type={type1}
-        background="var(--primary-color)"
-        color="var(--white-color)"
-      /> */}
+
       <MySwiper
         heading="Latest News"
         color="var(--primary-color)"
@@ -90,15 +74,7 @@ function IndexPage() {
         date={date2}
         type={type2}
       />
-      {/* <LatestNew
-        heading="Latest News"
-        color="var(--primary-color)"
-        background="var(--white-color)"
-        images={imageArr2}
-        subheading={subheading2}
-        date={date2}
-        type={type2}
-      /> */}
+
       <ProfileSection />
       <Sponsor />
       <Footer />
