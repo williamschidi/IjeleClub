@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import { useMediaQuery } from 'react-responsive';
 import styled, { css } from 'styled-components';
 import MySwiper from '../components/MySwiper';
+import TabComponents from '../components/TabComponents';
 
 const imageArr = images.map((img) => img.image);
 const subheading = images.map((img) => img.subheading);
@@ -78,6 +79,7 @@ function IndexPage() {
       <ProfileSection />
       <Sponsor />
       <Footer />
+      <TabComponents />
     </Container>
   );
 }

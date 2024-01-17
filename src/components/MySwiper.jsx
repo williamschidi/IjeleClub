@@ -27,14 +27,19 @@ const Container = styled.div`
 const H1 = styled.h1`
   font-size: 4rem;
   font-weight: bold;
-  padding: 6rem 0 4rem;
+  padding: 8rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 
   @media screen and (max-width: 600px) {
     font-size: 2rem;
-    padding: 5rem 3rem 2rem;
+    padding: 6rem 3rem 1rem;
   }
 `;
 const SwiperStyled = styled(Swiper)`
+  /* margin: 1rem 0 4rem; */
   height: 45rem;
   .swiper-button-next,
   .swiper-button-prev {
@@ -60,6 +65,7 @@ const SwiperStyled = styled(Swiper)`
 
   @media screen and (max-width: 600px) {
     padding: 0 3rem;
+    height: 40rem;
   }
 `;
 
@@ -69,6 +75,10 @@ const Cards = styled.div`
   height: 45rem;
   transition: transform 1s ease-in-out;
   cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+    height: 40rem;
+  }
 `;
 
 const Img = styled.img`

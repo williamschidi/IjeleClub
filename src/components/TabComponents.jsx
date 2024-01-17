@@ -1,13 +1,16 @@
+import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import CenterTab from './CenterTab';
 import styled from 'styled-components';
-import { HiArrowRight } from 'react-icons/hi2';
-import { NavLink } from 'react-router-dom';
+
 import {
   matchDetailsMen,
   matchDetailsWomen,
   matchDetailsAcademy,
 } from './matchDetailsObject.js';
-import { useState } from 'react';
-import CenterTab from './CenterTab.jsx';
+import { HiArrowRight } from 'react-icons/hi2';
+import { NavLink } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 const Container = styled.div`
   position: relative;
@@ -21,30 +24,13 @@ const Container = styled.div`
     height: 55vh;
   }
 `;
-const TabContentContainer = styled.div`
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 4rem;
-  margin: 0 auto;
-
-  @media screen and (max-width: 600px) {
-    gap: 2rem;
-    width: 55rem;
-    height: 45vh;
-    overflow-x: hidden;
-    justify-content: flex-start;
-  }
-`;
-
-const TabsContent = styled.div`
+const SwiperStyled = styled(Swiper)`
+  padding: 2rem 6rem;
   display: none;
   &.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
   }
 `;
 
@@ -53,9 +39,6 @@ const TabContent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex-shrink: 0;
-  width: 36rem;
-  height: 27rem;
   background: var(--white-color);
   padding: 1.5rem;
   gap: 0.3rem;
@@ -159,18 +142,27 @@ const MatchDetail = styled.button`
   }
 `;
 
-function TabComponent() {
-  const [activeTab, setActiveTab] = useState('tab1');
+function TabComponents() {
+  const [activeTab, setActiveTab] = useState('tab3');
+  const isMobile = useMediaQuery({ maxWidth: 600 });
 
   return (
     <Container>
       <CenterTab activeTab={activeTab} setActiveTab={setActiveTab} />
-
-      <TabContentContainer>
-        <TabsContent
-          id="tab1"
-          className={`tab-content ${activeTab === 'tab1' ? 'active' : ''}`}
-        >
+      <SwiperStyled
+        id="tab1"
+        className={`tab-content ${activeTab === 'tab1' ? 'active' : ''}`}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        speed={1000}
+        spaceBetween={isMobile ? 3 : 10}
+        slidesPerView={isMobile ? 1 : 3}
+        pagination={{ clickable: true }}
+        threshold={5}
+      >
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsMen.past.date}</Dates>
             <Title>{matchDetailsMen.past.title}</Title>
@@ -184,12 +176,13 @@ function TabComponent() {
             </Teams>
             <NavLink to="matchDetails">
               <MatchDetail>
-                match center{' '}
+                match center
                 <HiArrowRight size={15} color="var(--white-color)" />
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsMen.present.date}</Dates>
             <Title>{matchDetailsMen.present.title}</Title>
@@ -205,12 +198,13 @@ function TabComponent() {
 
             <NavLink to="matchDetails">
               <MatchDetail>
-                match center{' '}
+                match center
                 <HiArrowRight size={15} color="var(--white-color)" />
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsMen.future.date}</Dates>
             <Title>{matchDetailsMen.future.title}</Title>
@@ -229,12 +223,23 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-        </TabsContent>
+        </SwiperSlide>
+      </SwiperStyled>
 
-        <TabsContent
-          id="tab2"
-          className={`tab-content ${activeTab === 'tab2' ? 'active' : ''}`}
-        >
+      <SwiperStyled
+        id="tab2"
+        className={`tab-content ${activeTab === 'tab2' ? 'active' : ''}`}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        speed={1000}
+        // spaceBetween={isMobile ? 5 : 10}
+        slidesPerView={isMobile ? 1 : 3}
+        pagination={{ clickable: true }}
+        threshold={5}
+      >
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsWomen.past.date}</Dates>
             <Title>{matchDetailsWomen.past.title}</Title>
@@ -253,7 +258,8 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsWomen.present.date}</Dates>
             <Title>{matchDetailsWomen.present.title}</Title>
@@ -272,7 +278,8 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsWomen.future.date}</Dates>
             <Title>{matchDetailsWomen.future.title}</Title>
@@ -291,12 +298,23 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-        </TabsContent>
+        </SwiperSlide>
+      </SwiperStyled>
 
-        <TabsContent
-          id="tab3"
-          className={`tab-content ${activeTab === 'tab3' ? 'active' : ''}`}
-        >
+      <SwiperStyled
+        id="tab3"
+        className={`tab-content ${activeTab === 'tab3' ? 'active' : ''}`}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        speed={1000}
+        spaceBetween={isMobile ? 5 : 10}
+        slidesPerView={isMobile ? 1 : 3}
+        pagination={{ clickable: true }}
+        threshold={5}
+      >
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsAcademy.past.date}</Dates>
             <Title>{matchDetailsAcademy.past.title}</Title>
@@ -315,7 +333,8 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsAcademy.present.date}</Dates>
             <Title>{matchDetailsAcademy.present.title}</Title>
@@ -340,7 +359,8 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-
+        </SwiperSlide>
+        <SwiperSlide>
           <TabContent>
             <Dates>{matchDetailsAcademy.future.date}</Dates>
             <Title>{matchDetailsAcademy.future.title}</Title>
@@ -359,10 +379,10 @@ function TabComponent() {
               </MatchDetail>
             </NavLink>
           </TabContent>
-        </TabsContent>
-      </TabContentContainer>
+        </SwiperSlide>
+      </SwiperStyled>
     </Container>
   );
 }
 
-export default TabComponent;
+export default TabComponents;
