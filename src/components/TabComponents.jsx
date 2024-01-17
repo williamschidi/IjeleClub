@@ -83,7 +83,7 @@ const Teams = styled.div`
   row-gap: 1.5rem;
 
   @media screen and (max-width: 600px) {
-    grid-template-columns: 8rem auto 8rem;
+    grid-template-columns: 7rem auto 7rem;
     padding: 1rem 1.4rem 3rem 1.4rem;
     column-gap: 1.5rem;
     row-gap: 0.8rem;
@@ -142,9 +142,9 @@ const MatchDetail = styled.button`
   cursor: pointer;
 
   @media screen and (max-width: 600px) {
-    padding: 1rem 6rem;
+    padding: 1rem 4.8rem;
     font-size: 1.2rem;
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
   @media screen and (min-width: 601px) and (max-width: 1200px) {
     padding: 1rem 8rem;
