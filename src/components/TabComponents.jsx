@@ -82,9 +82,16 @@ const Teams = styled.div`
   column-gap: 2rem;
   row-gap: 1.5rem;
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 600px) {
     grid-template-columns: 8rem auto 8rem;
-    padding: 1rem 1.2rem 3rem 1.2rem;
+    padding: 1rem 1.4rem 3rem 1.4rem;
+    column-gap: 1.5rem;
+    row-gap: 0.8rem;
+  }
+
+  @media screen and (min-width: 601px) and(max-width: 1050px) {
+    grid-template-columns: 8rem auto 8rem;
+    padding: 1rem 1.4rem 3rem 1.4rem;
   }
 `;
 
@@ -134,15 +141,15 @@ const MatchDetail = styled.button`
   font-size: 1.4rem;
   cursor: pointer;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 600px) {
+    padding: 1rem 6rem;
+    font-size: 1.2rem;
+    gap: 0.5rem;
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
     padding: 1rem 8rem;
     font-size: 1.2rem;
     gap: 0.7rem;
-  }
-
-  @media screen and (max-width: 1050px) {
-    font-size: 1rem;
-    padding: 0.8rem 7rem;
   }
 `;
 
