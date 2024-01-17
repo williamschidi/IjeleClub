@@ -160,7 +160,7 @@ function TabComponents() {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        speed={1000}
+        speed={300}
         spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true, backgroundColor: 'white ' }}
@@ -237,7 +237,7 @@ function TabComponents() {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        speed={1000}
+        speed={300}
         spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
@@ -312,7 +312,7 @@ function TabComponents() {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        speed={1000}
+        speed={300}
         spaceBetween={isMobile ? 30 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}

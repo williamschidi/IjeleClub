@@ -162,7 +162,7 @@ function MySwiper({
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           }}
-          speed={1000}
+          speed={300}
           spaceBetween={isMobile ? 30 : 10}
           slidesPerView={isMobile ? 1 : 3}
           pagination={{ clickable: true }}
