@@ -52,6 +52,7 @@ const TabContent = styled.div`
 
   @media screen and (max-width: 600px) {
     height: 23rem;
+    gap: 0.2rem;
   }
 
   @media screen and (min-width: 601px) and(max-width: 1200px) {
@@ -83,9 +84,9 @@ const Teams = styled.div`
   row-gap: 1.5rem;
 
   @media screen and (max-width: 600px) {
-    grid-template-columns: 7rem auto 7rem;
-    padding: 1rem 1.4rem 3rem 1.4rem;
-    column-gap: 1.5rem;
+    grid-template-columns: 8rem auto 8rem;
+    padding: 1rem 1.3rem 2.8rem 1.3rem;
+    column-gap: 1rem;
     row-gap: 0.8rem;
   }
 
