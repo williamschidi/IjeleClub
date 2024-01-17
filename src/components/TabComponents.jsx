@@ -28,6 +28,7 @@ const SwiperStyled = styled(Swiper)`
   padding: 2rem 6rem;
   display: none;
   height: 45vh;
+
   &.active {
     display: flex;
     align-items: center;
@@ -35,7 +36,7 @@ const SwiperStyled = styled(Swiper)`
     height: 31rem;
   }
   @media screen and (max-width: 600px) {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
   }
 `;
 
@@ -45,12 +46,11 @@ const TabContent = styled.div`
   align-items: center;
   justify-content: flex-start;
   background: var(--white-color);
-  padding: 1.5rem;
+  padding: 1.5rem 3rem;
   gap: 0.3rem;
   height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 29rem;
     height: 23rem;
   }
 
