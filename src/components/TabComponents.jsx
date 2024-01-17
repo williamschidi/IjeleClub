@@ -35,7 +35,7 @@ const SwiperStyled = styled(Swiper)`
     height: 31rem;
   }
   @media screen and (max-width: 600px) {
-    padding: 4rem 4rem;
+    padding: 4rem 2rem;
   }
 `;
 
@@ -50,7 +50,7 @@ const TabContent = styled.div`
   height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 33rem;
+    width: 30rem;
     height: 23rem;
   }
 
@@ -147,7 +147,7 @@ const MatchDetail = styled.button`
 `;
 
 function TabComponents() {
-  const [activeTab, setActiveTab] = useState('tab3');
+  const [activeTab, setActiveTab] = useState('tab1');
   const isMobile = useMediaQuery({ maxWidth: 600 });
 
   return (
