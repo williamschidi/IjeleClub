@@ -40,9 +40,11 @@ function LatestNew({
   };
 
   function handleTouchStart(e) {
+    console.log('Touch start');
     setStartX(e.touches[0].clientX);
   }
   function handleTouchMove(e) {
+    console.log('Touch move');
     if (startX === null) return;
     const currentX = e.touches[0].clientX;
     const difference = startX - currentX;
@@ -51,6 +53,7 @@ function LatestNew({
   }
 
   function handleTouchEnd() {
+    console.log('Touch end');
     const threshold = 30;
     if (translateX > threshold) {
       setCurSlide((prevSlide) => prevSlide + 1);

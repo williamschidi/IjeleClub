@@ -2,13 +2,14 @@ import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
 import TabComponent from '../components/TabComponent';
-import LatestNew from '../components/LatestNew';
+// import LatestNew from '../components/LatestNew';
 import { images, images1, images2 } from '../components/imgArrays';
 import ProfileSection from '../components/ProfileSection';
 import Sponsor from '../components/Sponsor';
 import Footer from '../components/Footer';
 import { useMediaQuery } from 'react-responsive';
 import styled, { css } from 'styled-components';
+import MySwiper from '../components/MySwiper';
 
 const imageArr = images.map((img) => img.image);
 const subheading = images.map((img) => img.subheading);
@@ -42,7 +43,7 @@ function IndexPage() {
       <Nav />
       <HeroSection />
       <Advert />
-      <LatestNew
+      <MySwiper
         images={imageArr}
         heading="Latest Video"
         subheading={subheading}
@@ -51,9 +52,18 @@ function IndexPage() {
         color="var(--primary-color)"
         background="var(--white-color)"
       />
+      {/* <LatestNew
+        images={imageArr}
+        heading="Latest Video"
+        subheading={subheading}
+        date={date}
+        type={type}
+        color="var(--primary-color)"
+        background="var(--white-color)"
+      /> */}
       <Advert />
       <TabComponent />
-      <LatestNew
+      <MySwiper
         images={imageArr1}
         heading="Interview"
         subheading={subheading1}
@@ -62,7 +72,16 @@ function IndexPage() {
         background="var(--primary-color)"
         color="var(--white-color)"
       />
-      <LatestNew
+      {/* <LatestNew
+        images={imageArr1}
+        heading="Interview"
+        subheading={subheading1}
+        date={date1}
+        type={type1}
+        background="var(--primary-color)"
+        color="var(--white-color)"
+      /> */}
+      <MySwiper
         heading="Latest News"
         color="var(--primary-color)"
         background="var(--white-color)"
@@ -71,6 +90,15 @@ function IndexPage() {
         date={date2}
         type={type2}
       />
+      {/* <LatestNew
+        heading="Latest News"
+        color="var(--primary-color)"
+        background="var(--white-color)"
+        images={imageArr2}
+        subheading={subheading2}
+        date={date2}
+        type={type2}
+      /> */}
       <ProfileSection />
       <Sponsor />
       <Footer />

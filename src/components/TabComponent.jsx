@@ -7,6 +7,7 @@ import {
   matchDetailsAcademy,
 } from './matchDetailsObject.js';
 import { useState } from 'react';
+import CenterTab from './CenterTab.jsx';
 
 const TabContainer = styled.div`
   position: relative;
@@ -19,10 +20,6 @@ const TabContainer = styled.div`
     padding: 4rem 3rem 3rem;
     height: 60vh;
   }
-  /* @media screen and (min-width: 601px) and (max-width: 1200px) {
-    gap: 3rem;
-    height: 55vh;
-  } */
 `;
 const TabContentContainer = styled.div`
   max-width: 100%;
@@ -31,13 +28,11 @@ const TabContentContainer = styled.div`
   align-items: flex-end;
   gap: 4rem;
   margin: 0 auto;
-  /* margin-top: 8rem; */
 
   @media screen and (max-width: 600px) {
     gap: 2rem;
     width: 55rem;
     height: 50vh;
-    /* margin-top: 4rem; */
     overflow-x: hidden;
     justify-content: flex-start;
   }
@@ -71,68 +66,8 @@ const TabContent = styled.div`
     width: 32rem;
     height: 23rem;
   }
-
-  /* @media screen and (max-width: 1050px) {
-    width: 30rem;
-    height: 21rem;
-    gap: 0;
-  } */
 `;
 
-const CenterTab = styled.div`
-  width: 60rem;
-  height: 7.5rem;
-  background: #e9ecef;
-  position: absolute;
-  top: 0;
-  right: 50%;
-  transform: translate(50%, -50%);
-  border-radius: 15rem;
-
-  @media screen and (max-width: 600px) {
-    width: 30rem;
-    border-radius: 10rem;
-    height: 5rem;
-  }
-  @media screen and (min-width: 601px) and(max-width: 1200px) {
-    width: 50rem;
-    height: 6.5rem;
-  }
-`;
-
-const Ul = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-`;
-
-const Li = styled.li`
-  list-style: none;
-  text-align: center;
-  width: 19rem;
-  padding: 2rem 6rem;
-  border-radius: 5rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  cursor: pointer;
-  &.active {
-    background: var(--white-color);
-  }
-  @media screen and (max-width: 600px) {
-    width: 9.4rem;
-    font-size: 1.1rem;
-    padding: 1.2rem 2.4rem;
-  }
-
-  @media screen and (min-width: 601px) and (max-width: 1200px) {
-    width: 15rem;
-    font-size: 1.4rem;
-  }
-`;
 const Dates = styled.div`
   text-transform: uppercase;
   font-size: 1.4rem;
@@ -221,33 +156,11 @@ const MatchDetail = styled.button`
 
 function TabComponent() {
   const [activeTab, setActiveTab] = useState('tab1');
-  function handleTabClick(tab) {
-    setActiveTab(() => tab);
-  }
+
   return (
     <TabContainer>
-      <CenterTab>
-        <Ul>
-          <Li
-            className={`tab ${activeTab === 'tab1' ? 'active' : ''}`}
-            onClick={() => handleTabClick('tab1')}
-          >
-            Men
-          </Li>
-          <Li
-            className={`tab ${activeTab === 'tab2' ? 'active' : ''}`}
-            onClick={() => handleTabClick('tab2')}
-          >
-            Women
-          </Li>
-          <Li
-            className={`tab ${activeTab === 'tab3' ? 'active' : ''}`}
-            onClick={() => handleTabClick('tab3')}
-          >
-            Academy
-          </Li>
-        </Ul>
-      </CenterTab>
+      <CenterTab activeTab={activeTab} setActiveTab={setActiveTab} />
+
       <TabContentContainer>
         <TabContent
           id="tab1"
