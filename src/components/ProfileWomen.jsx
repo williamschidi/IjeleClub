@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: relative;
   width: 33rem;
-  height: 40rem;
+  height: 70vh;
   background: linear-gradient(
     to right,
     var(--white-color) 50%,

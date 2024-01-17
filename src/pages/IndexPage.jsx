@@ -1,8 +1,6 @@
 import Nav from '../components/Nav';
 import HeroSection from '../components/HeroSection';
 import Advert from '../components/Advert';
-import TabComponent from '../components/TabComponent';
-// import LatestNew from '../components/LatestNew';
 import { images, images1, images2 } from '../components/imgArrays';
 import ProfileSection from '../components/ProfileSection';
 import Sponsor from '../components/Sponsor';
@@ -55,7 +53,7 @@ function IndexPage() {
       />
 
       <Advert />
-      <TabComponent />
+      <TabComponents />
       <MySwiper
         images={imageArr1}
         heading="Interview"
@@ -79,7 +77,7 @@ function IndexPage() {
       <ProfileSection />
       <Sponsor />
       <Footer />
-      <TabComponents />
+     
     </Container>
   );
 }

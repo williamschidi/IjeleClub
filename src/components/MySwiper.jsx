@@ -155,7 +155,7 @@ function MySwiper({
     <MainContainer background={background}>
       <Container color={color}>
         <H1>
-          {heading} <HiArrowRight size={isMobile ? 20 : 30} color={color} />
+          {heading} <HiArrowRight size={isMobile ? 20 : 50} color={color} />
         </H1>
         <SwiperStyled
           navigation={{

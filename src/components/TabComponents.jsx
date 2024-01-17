@@ -27,10 +27,15 @@ const Container = styled.div`
 const SwiperStyled = styled(Swiper)`
   padding: 2rem 6rem;
   display: none;
+  height: 45vh;
   &.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40rem;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 2rem 2rem;
   }
 `;
 
@@ -42,12 +47,11 @@ const TabContent = styled.div`
   background: var(--white-color);
   padding: 1.5rem;
   gap: 0.3rem;
+  height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 30rem;
-    height: 23rem;
-
-    overflow: hidden;
+    width: 40rem;
+    height: 25rem;
   }
 
   @media screen and (min-width: 601px) and(max-width: 1200px) {
@@ -157,7 +161,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 3 : 10}
+        spaceBetween={isMobile ? 5 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}
@@ -234,7 +238,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        // spaceBetween={isMobile ? 5 : 10}
+        spaceBetween={isMobile ? 5 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}
@@ -309,7 +313,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={1000}
-        spaceBetween={isMobile ? 5 : 10}
+        spaceBetween={isMobile ? 5 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}
