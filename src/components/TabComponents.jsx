@@ -35,7 +35,7 @@ const SwiperStyled = styled(Swiper)`
     height: 31rem;
   }
   @media screen and (max-width: 600px) {
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
   }
 `;
 
@@ -50,7 +50,7 @@ const TabContent = styled.div`
   height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 28rem;
+    width: 29rem;
     height: 23rem;
   }
 
