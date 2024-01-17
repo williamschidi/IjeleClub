@@ -14,7 +14,7 @@ const AdvertSection = styled.div`
 
   @media screen and (max-width: 600px) {
     max-width: 90%;
-    margin: 1.6rem auto;
+    margin: 4rem auto 2rem;
   }
 
   @media screen and (min-width: 601px) and(max-width: 1000px) {

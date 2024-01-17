@@ -32,10 +32,10 @@ const SwiperStyled = styled(Swiper)`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40rem;
+    height: 31rem;
   }
   @media screen and (max-width: 600px) {
-    padding: 2rem 2rem;
+    padding: 4rem 4rem;
   }
 `;
 
@@ -50,8 +50,8 @@ const TabContent = styled.div`
   height: 27rem;
 
   @media screen and (max-width: 600px) {
-    width: 40rem;
-    height: 25rem;
+    width: 33rem;
+    height: 23rem;
   }
 
   @media screen and (min-width: 601px) and(max-width: 1200px) {
@@ -163,7 +163,7 @@ function TabComponents() {
         speed={1000}
         spaceBetween={isMobile ? 5 : 20}
         slidesPerView={isMobile ? 1 : 3}
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, backgroundColor: 'white ' }}
         threshold={5}
       >
         <SwiperSlide>
