@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 }
 :root{
   --primary-color:#001489;
+  
   /* --secondary-color: #339af0; */
   --secondary-color: #1864ab;
   --intermediate-color : #9e9ea6;
