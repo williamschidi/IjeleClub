@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { HiBars3 } from 'react-icons/hi2';
-import { NavLink } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 const NavButton = styled.button`
@@ -9,9 +8,10 @@ const NavButton = styled.button`
   border: none;
   cursor: pointer;
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   background: var(--primary-color);
 
   @media screen and (max-width: 600px) {
@@ -27,27 +27,24 @@ const NavButton = styled.button`
 `;
 const H4 = styled.div`
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
   color: var(--white-color);
 `;
 
-function CollapseNav() {
+function CollapseNav({ toggleModal }) {
   const smallLaptop = useMediaQuery({ minWidth: 1201 });
   const mobile = useMediaQuery({ maxWidth: 600 });
 
   return (
-    <NavButton>
-      <NavLink to="#">
-        <HiBars3
-          size={mobile ? 20 : 30}
-          color={
-            smallLaptop
-              ? 'var(--white-color)'
-              : 'var(--intermediate-shade-color)'
-          }
-        />
-        {smallLaptop && <H4>MORE</H4>}
-      </NavLink>
+    <NavButton onClick={toggleModal}>
+      <HiBars3
+        size={mobile ? 20 : 30}
+        color={
+          smallLaptop ? 'var(--white-color)' : 'var(--intermediate-shade-color)'
+        }
+      />
+      {smallLaptop && <H4>MORE</H4>}
     </NavButton>
   );
 }

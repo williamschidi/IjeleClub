@@ -52,10 +52,7 @@ function ProfileMen() {
     <Container>
       <Span>Men</Span>
 
-      <Img
-        src="https://img.chelseafc.com/image/upload/f_auto,h_53…ple/first-team/2023-24/Sterling_AP_Home_23_24.png"
-        alt="img"
-      />
+      <Img src="#" alt="img" />
     </Container>
   );
 }

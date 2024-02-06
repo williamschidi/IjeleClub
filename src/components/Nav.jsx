@@ -44,7 +44,7 @@ const RightSide = styled.ul`
   }
 `;
 
-function Nav() {
+function Nav({ toggleModal }) {
   const tablet = useMediaQuery({ minWidth: 1200 });
 
   return (
@@ -54,7 +54,7 @@ function Nav() {
       {tablet ? <NavCenter /> : null}
       <RightSide>
         <Search />
-        <CollapseNav />
+        <CollapseNav toggleModal={toggleModal} />
       </RightSide>
     </NavStyled>
   );

@@ -12,13 +12,13 @@ const Li = styled.li`
   color: var(--primary-color);
   font-size: 1.8rem;
   font-weight: bold;
-  padding: 5rem 2.5rem;
+  padding: 4.6rem 2.5rem;
   text-transform: uppercase;
-  border-bottom: 4px solid transparent;
+  border-bottom: 0.6rem solid transparent;
 
   transition: opacity 0.3s ease-in-out, border-botton 0.3s ease-in-out;
   &:hover {
-    border-bottom: 4px solid var(--primary-color);
+    border-bottom: 0.6rem solid var(--primary-color);
   }
 `;
 
