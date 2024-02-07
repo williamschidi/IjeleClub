@@ -66,6 +66,7 @@ const SwiperStyled = styled(Swiper)`
   @media screen and (max-width: 600px) {
     padding: 0 3rem;
     height: 40rem;
+    max-width: 8;
   }
 `;
 
@@ -73,11 +74,13 @@ const Cards = styled.div`
   display: flex;
   flex-direction: column;
   height: 45rem;
+  width: 100%;
   transition: transform 1s ease-in-out;
   cursor: pointer;
 
   @media screen and (max-width: 600px) {
     height: 40rem;
+    width: 37rem;
   }
 `;
 
@@ -163,8 +166,8 @@ function MySwiper({
             prevEl: '.swiper-button-prev',
           }}
           speed={300}
-          spaceBetween={isMobile ? 30 : 10}
-          slidesPerView={isMobile ? 1 : 3}
+          spaceBetween={isMobile ? 5 : 10}
+          slidesPerView={isMobile ? 1.1 : 3}
           pagination={{ clickable: true }}
           threshold={5}
         >
