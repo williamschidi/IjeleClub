@@ -246,7 +246,7 @@ function TabComponents() {
           prevEl: '.swiper-button-prev',
         }}
         speed={300}
-        spaceBetween={isMobile ? 30 : 20}
+        spaceBetween={isMobile ? 10 : 20}
         slidesPerView={isMobile ? 1 : 3}
         pagination={{ clickable: true }}
         threshold={5}

@@ -137,11 +137,11 @@ export const images2 = [
 ];
 
 export const indexImages = [
-  {
-    src: 'pic5.jpg',
-    alt: 'pic5',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-  },
+  // {
+  //   src: 'pic5.jpg',
+  //   alt: 'pic5',
+  //   text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+  // },
   {
     src: 'https://img.chelseafc.com/image/upload/f_auto,c_fill,g_faces,w_1440,h_808,q_auto:best/editorial/match-reports/2021-22/villa_park_view_inside.jpg',
     alt: 'pic6',
