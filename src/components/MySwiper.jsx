@@ -80,7 +80,7 @@ const Cards = styled.div`
 
   @media screen and (max-width: 600px) {
     height: 40rem;
-    width: 37rem;
+    width: 28rem;
   }
 `;
 
@@ -167,7 +167,7 @@ function MySwiper({
           }}
           speed={300}
           spaceBetween={isMobile ? 5 : 10}
-          slidesPerView={isMobile ? 1.1 : 3}
+          slidesPerView={isMobile ? 1.05 : 3}
           pagination={{ clickable: true }}
           threshold={5}
         >
