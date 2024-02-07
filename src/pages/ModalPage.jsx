@@ -81,7 +81,8 @@ function ModalPage({ toggleModal }) {
       <Container1>
         <Ul1>
           <Li1>About the club</Li1>
-          <Li1>Supporter Relation and Fan Advisory Board</Li1>
+          <Li1>Supporter Relation and Fan </Li1>
+          <Li1>Advisory Board</Li1>
           <Li1>Our History</Li1>
           <Li1>Stamford Bridge</Li1>
           <Li1>Community</Li1>
